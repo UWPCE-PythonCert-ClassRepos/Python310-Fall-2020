@@ -9,7 +9,7 @@
 #  -- to be nicely served by gh-pages
 
 
-GHPAGESDIR=../Python310-Fall-2020.gh-pages/
+GHPAGESDIR=../../Fall2018-PY210A.gh-pages/
 
 # make sure gh-pages dir is there -- exit if not
 if [ ! -d $GHPAGESDIR ]; then
