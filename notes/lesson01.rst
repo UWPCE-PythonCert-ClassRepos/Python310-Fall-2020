@@ -106,7 +106,10 @@ Homework:
 
 :ref:`github_classroom`
 
-We'll playaround with this in this session so we can get the hang of it.
+https://uwpce-pythoncert.github.io/ProgrammingInPython/topics/01-setting_up/github_classroom.html
+
+
+We'll play around with this in this session so we can get the hang of it.
 
 It's new to me, too!
 
