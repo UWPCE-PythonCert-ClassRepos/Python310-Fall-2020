@@ -1,6 +1,6 @@
 """
 this program uses dictionaries for menus
-from Lesson 4, video 3 Python's missing switch statement
+from the video:  Python's missing switch statement
 """
 
 def menu_selection(prompt, dispatch_dict):

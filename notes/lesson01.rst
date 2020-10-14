@@ -2,9 +2,9 @@
 
 .. _notes_lesson01:
 
-#####################################################################
-Introduction to the the Python Certificate: Online version: Fall 2020
-#####################################################################
+########################################################
+10/13/2020: Introduction to Py310: Programming in Python 
+########################################################
 
 
 In which you are introduced to this class, your instructors, your environment and your new best friend, Python.
@@ -19,11 +19,17 @@ In which you are introduced to this class, your instructors, your environment an
 
 .. _xkcd.com/353: http://xkcd.com/353
 
+ 
+The goal of this lesson is get us all familiar with each other, the class, and all teh tools and systems we'll need to conduct the class. That is, at the end of this lesson  we can start the actual learning about Python :-)
 
 Who are we?
 ===========
 
-Introduction to your instructors.
+Introduction to your instructors:
+
+Chris
+
+Subhiksha
 
 
 Who are you?
@@ -43,7 +49,10 @@ Tell us a tiny bit about yourself:
 * Name
 * Programming background: what languages have you used?
 * Why do you want to learn Python?
-* what's your favorite coffee shop or bar -- or was, before the Pandemic.
+* What's your favorite coffee shop or bar -- or was, before the Pandemic.
+
+* What is your gitHub handle -- if you already have one.
+  If not, send it to us when you get it: ``pythonCHB@gmail.com``
 
 
 Introduction to This Class
@@ -53,8 +62,9 @@ The overall class is managed by a learning management system -- Canvas.
 
 You should have gotten a link to the instance for the class sent to you.
 
-Is eveyone "hooked up" to Canvas?
+Is everyone "hooked up" to Canvas?
 
+NOTE: I'm not a big Canvas fan: it's where to go to find assignemnts and get on teh Zoom, etc, but much of our interaction will be via programming tools, like gitHub, rather than Canvas.
 
 Class Structure
 ---------------
@@ -71,14 +81,14 @@ And class time will be spent primarily coding:
  * Lots of demos
  * Working on Coding Exercises:
    - On your own, with us to help
-   - In small groups
+   - In small groups (breakout groups on Zoom)
    - Instructor led.
 
 This means that you are expected to complete the reading (and video watching) BEFORE each class. That way, we don't have to take class time introducing the basic material and can focus on questions and applying what you've read about.
 
 Interrupt us with questions -- please!
 
-The TA will be monitoring Zoom chat
+Subhiksha will be monitoring Zoom chat
 
 (Some of the best learning prompted by questions)
 
@@ -92,11 +102,11 @@ Homework:
 
 * You are adults -- it's up to you to do the homework. But if you don't code, you won't learn to code. And we can't give you a certificate if you haven't demonstrated that you've done the work.
 
-* To submit your work, we willuse gitHub Classroom:
+* To submit your work, we will use gitHub Classroom:
 
 :ref:`github_classroom`
 
-We'll playaround withthis in this session so we can get the hang of it.
+We'll playaround with this in this session so we can get the hang of it.
 
 It's new to me, too!
 
@@ -106,11 +116,19 @@ Communication
 
 MS Teams:
 
-We have set up MS Teams for this class -- please make sure you are on it!
+We have set up an MS Team for this class:
+
+`MS Team for Pyy310 Fall 2020 <https://teams.microsoft.com/l/team/19%3adcf0c33c75da4ff689e05c243fb241ca%40thread.tacv2/conversations?groupId=5060689e-5534-4fd7-95a9-7252f9eb3855&tenantId=f6b6dd5b-f02f-441a-99a0-162ac5060bd2>`_
+
+Most of you are already members (with your uw email), but if not, I think you can go to that link and request to join.
+
 
 Anything Python related is fair game.  Questions and discussion about the assignments are encouraged.
 
 We highly encourage you to work together. You will learn at a much deeper level if you work together, and it gets you ready to collaborate with colleagues.
+
+I will also send occasional email out to the whole class -- make sure I have the email address you want me to use. (I've got your uw email addresses now).
+
 
 
 Office Hours

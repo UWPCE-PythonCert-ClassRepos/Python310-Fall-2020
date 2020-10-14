@@ -6,8 +6,8 @@
 For the trigrams exercise, you want to get an arbitrary item from a dictionary
 without removing it:
 
-dict.popitem() gets you an arbitrary item, but it removes it also.
-In this case, we didn't want to remove it.
+dict.popitem() gets you an arbitrary item, but it removes it also; we dodn't
+want to remove it for this problem.
 
 In this case, we only needed and arbitrary key, but the principle is
 the same if you want the whole item.
@@ -54,7 +54,9 @@ print(random.choice(list(tiny.keys())))
 # complicate your code. This is why dict.keys() does not return a list (in py3):
 print("type of keys():", type(tiny.keys()))
 
-# the dict_keys type is an "iterable" -- something you can iterate through with a for loop:
+# the dict_keys type is a special set -- so you can do "in" tests efficiently.
+# but it is not a Sequence, so you can't index it, and can't use it with `random.choice()`
+# and it is an "iterable" -- something you can iterate through with a for loop:
 for key in tiny.keys():
     print(key)
 
@@ -68,6 +70,7 @@ for key in tiny.keys():
     print("An arbitrary key")
     print(key)
     break
+
 # (notice that it's the SAME arbitrary key as the first item of the list method --
 # it IS the first item off the list.
 
@@ -103,7 +106,7 @@ except TypeError as err:
 # This is why I thought there should be a quick and easy way to do this.
 #
 # However, on further thought, this is pretty unusual thing to need to do:
-#  .popitems() makes sense -- you sometimes need to pull out a item from a dict
+#  .popitem() makes sense -- you sometimes need to pull out a item from a dict
 # one by one, and do something with it, and want it removed from the dict.
 # you are likely to do this over an over again until the dict is empty.
 

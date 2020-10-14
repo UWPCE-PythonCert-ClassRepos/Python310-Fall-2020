@@ -1,4 +1,11 @@
+#!usr/bin/env python3
 
+"""
+From coding bat, Logic two
+
+https://codingbat.com/prob/p190859
+
+"""
 
 def make_chocolate(small, big, goal):
     big_fit = goal // 5
@@ -12,7 +19,6 @@ def make_chocolate(small, big, goal):
     else:
         return space_left
 
-print(__name__)
 
 if __name__ == "__main__":
 

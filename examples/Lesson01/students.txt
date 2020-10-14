@@ -1,40 +1,41 @@
 Name: Programming Languages
-Angela J Asgekar:
-Jonathan Paul Bednar:
-Jeff Bennett:
-Maria G Berschauer:
-David Brandt:
-Rudolph T Carvajal:
-Maria Corazon M Dacutanan:
+Angela J Asgekar: VB, SQL github: aasgekar
+Jonathan Paul Bednar: matlab java SQL, R gitHub: jonathanbednar
+Jeff Bennett: C, java, Python  github: jeffbennett1920
+Maria G Berschauer: Python, VB github: berscm 
+David Brandt: C#, javascript HTML, github: davidlbrandt
+Rudolph T Carvajal: Python, github rudycarvajal
+Maria Corazon M Dacutanan: powershell, perl, bash. github: mcmd08
 Sopheaktr L Danh:
-Yazmery De Leon Guzman:
-Kalana De Silva:
-Nathan Marc Debard:
-Devin Kiehl Duval:
-Matthew Edoimioya:
-Akalpit Gadre:
-Bishal Gupta:
-Scott Guyton:
+Yazmery De Leon Guzman: C#, gitHub: yazmerydeleon
+Kalana De Silva: C++, Matlab, Python gitHub: 
+Nathan Marc Debard: 
+Devin Kiehl Duval: VBA, Python, Java: github: devinduval09
+Matthew Edoimioya (Matt): html, matlab, java, C github: mattbourne1
+Akalpit Gadre: C++, SQL, Python github: akkugadre
+Bishal Gupta: SQL, gitHub: sqlbish
+Scott Guyton: C#, SQL, JS, powershell, gihub: kiljoy001
 Jin Han:
-Andrew Hanson:
-Jason Emmett Hill:
-Kelly Kauffman:
-Erik J Knighton:
-John G Mccauley:
-Roohie Menon:
-Huy Thanh Nguyen:
-Jimmy Nguyen:
-Rose Nyameke:
-Victor Alexander Orozco:
-Matt Parmett:
-Vikram Raghavan:
+Andrew Hanson: gith clichekhfan
+Jason Emmett Hill: perl bash, powershell, apache(python): github: 5th-gen-media
+Kelly Kauffman: Python, github: pythongal6295
+Erik J Knighton: R, C++
+John G Mccauley: SQL, Python github handle: johnmccauley
+Roohie Menon:R, matlab, github: roohie2789
+Huy Thanh Nguyen: SQL, MDX, R, C#. github: bigmanfrog
+Jimmy Nguyen: SQL, python, gitHub: jimmynguyen823
+Rose Nyameke: R, SQL, KQL, github: rnyameke
+Victor Alexander Orozco: perl, html, powershell. gitHub: alexoro71
+Matt Parmett: Python, matlab, VBA, SQL github: mattparmett
+Vikram Raghavan: SQL, matlab github: vikragha
 James Roefs:
-Farhan Samani:
-Hua Shao:
-Christopher Duane Smith:
-Shadle A Stewart:
-Katrina Seok Taylor:
-Arielle Waller:
-Brian H Wong:
+Farhan Samani: Java, gitHub: farhansolo
+
+Hua Shao: 
+Christopher Duane Smith: QBasic, JS, SQL, C#... github: daballachris 
+Shadle A Stewart:Matlab, bash, VBA, java github: shadlestewart
+Katrina Seok Taylor: katrinataylor
+Arielle Waller (Ari): matlab, python, SQL. github: ariellewaller
+Brian H Wong: html, JS, SQL, Python github: brianhwong206
 Quinn Johnson Yackulic:
 

@@ -1,7 +1,10 @@
 """
 Schedule students for lightning talks
+
+This version written in advance, using fancy Python features.
 """
-# needed to randomise the schedule
+
+# needed to randomize the schedule
 import random
 
 # read the whole file in as lines
@@ -25,7 +28,7 @@ random.shuffle(students)
 # make a list from 2 to 10
 weeks = list(range(2, 11))
 
-# make three of them...
+# make four of them...
 weeks = weeks * 4
 
 # put the students together with the weeks

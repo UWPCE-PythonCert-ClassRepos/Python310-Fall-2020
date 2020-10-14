@@ -1,36 +1,65 @@
-week 2: Andrew Hanson
-week 2: Kalana De Silva
-week 2: Maria Corazon M Dacutanan
-week 2: Vikram Raghavan
-week 3: Angela J Asgekar
-week 3: Huy Thanh Nguyen
-week 3: Jeff Bennett
-week 3: Rudolph T Carvajal
-week 4: Christopher Duane Smith
-week 4: Devin Kiehl Duval
-week 4: John G Mccauley
-week 4: Scott Guyton
-week 5: David Brandt
-week 5: Erik J Knighton
-week 5: Jimmy Nguyen
-week 5: Katrina Seok Taylor
-week 6: Bishal Gupta
-week 6: Jonathan Paul Bednar
-week 6: Matthew Edoimioya
-week 6: Victor Alexander Orozco
-week 7: Akalpit Gadre
-week 7: Brian H Wong
-week 7: Maria G Berschauer
-week 7: Quinn Johnson Yackulic
-week 8: Hua Shao
-week 8: Kelly Kauffman
-week 8: Rose Nyameke
-week 8: Sopheaktr L Danh
-week 9: James Roefs
-week 9: Nathan Marc Debard
-week 9: Roohie Menon
-week 9: Shadle A Stewart
-week 10: Farhan Samani
-week 10: Jason Emmett Hill
-week 10: Matt Parmett
-week 10: Yazmery De Leon Guzman
+
+Session # 2
+==============
+Angela J Asgekar
+Kalana De Silva
+Devin Kiehl Duval
+Jason Emmett Hill
+John G Mccauley
+
+Session # 3
+==============
+Jimmy Nguyen
+Quinn Johnson Yackulic
+Brian H Wong
+Arielle Waller (Ari)
+Erik J Knighton
+
+Session # 4
+==============
+Kelly Kauffman
+James Roefs
+Jonathan Paul Bednar
+Jeff Bennett
+
+Session # 5
+==============
+Hua Shao
+Vikram Raghavan
+Yazmery De Leon Guzman
+Matthew Edoimioya (Matt)
+
+Session # 6
+==============
+Farhan Samani
+Katrina Seok Taylor
+Rudolph T Carvajal
+Rose Nyameke
+
+Session # 7
+==============
+Sopheaktr L Danh
+Bishal Gupta
+Maria G Berschauer
+Nathan Marc Debard
+
+Session # 8
+==============
+David Brandt
+Matt Parmett
+Victor Alexander Orozco
+Shadle A Stewart
+
+Session # 9
+==============
+Christopher Duane Smith
+Maria Corazon M Dacutanan
+Akalpit Gadre
+Roohie Menon
+
+Session # 10
+==============
+Huy Thanh Nguyen
+Jin Han
+Scott Guyton
+Andrew Hanson
