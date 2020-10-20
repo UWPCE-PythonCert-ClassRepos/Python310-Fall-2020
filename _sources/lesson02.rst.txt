@@ -32,6 +32,7 @@ Up today:
 
 Are you ready? We'll do them somewhere in the middle of the lesson.
 
+
 Introductions:
 ==============
 
@@ -202,9 +203,9 @@ Break Time!
 10min break, then two more lightning talks:
 
 |
-|Jason Emmett Hill
+| Jason Emmett Hill
 |
-|John G Mccauley
+| John G Mccauley
 |
 
 
