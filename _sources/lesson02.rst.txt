@@ -2,9 +2,10 @@
 
 .. _notes_lesson02:
 
-#################################
-10/20/2020: And to actual coding!
-#################################
+########################################
+10/20/2020: And now on to actual coding!
+########################################
+
 
 A collection of notes to go over in class, to keep things organized.
 
