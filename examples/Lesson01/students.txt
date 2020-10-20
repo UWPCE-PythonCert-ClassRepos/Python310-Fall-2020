@@ -16,7 +16,7 @@ Akalpit Gadre: C++, SQL, Python github: akkugadre
 Bishal Gupta: SQL, gitHub: sqlbish
 Scott Guyton: C#, SQL, JS, powershell, gihub: kiljoy001
 Jin Han:
-Andrew Hanson: gith clichekhfan
+Andrew Hanson: github: clichekhfan
 Jason Emmett Hill: perl bash, powershell, apache(python): github: 5th-gen-media
 Kelly Kauffman: Python, github: pythongal6295
 Erik J Knighton: R, C++
@@ -30,7 +30,6 @@ Matt Parmett: Python, matlab, VBA, SQL github: mattparmett
 Vikram Raghavan: SQL, matlab github: vikragha
 James Roefs:
 Farhan Samani: Java, gitHub: farhansolo
-
 Hua Shao: 
 Christopher Duane Smith: QBasic, JS, SQL, C#... github: daballachris 
 Shadle A Stewart:Matlab, bash, VBA, java github: shadlestewart
