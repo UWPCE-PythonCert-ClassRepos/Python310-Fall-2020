@@ -2,39 +2,124 @@
 
 .. _notes_lesson02:
 
-####################
-Notes for lesson 02
-####################
+#################################
+10/20/2020: And to actual coding!
+#################################
 
 A collection of notes to go over in class, to keep things organized.
+
+NOTE: I need to remember to start recording the session -- so each class, feel free to pipe up and remind me!
+
+And use the chat to inject questions: Subhiksha will be monitoring it.
+
+Also: I'll try to have a break every hour -- ping me if I forget!
+
 
 Lightning Talks
 ===============
 
 Up today:
 
+| Angela J Asgekar
 |
-| someone
+| Kalana De Silva
 |
+| Devin Kiehl Duval
+|
+| Jason Emmett Hill
+|
+| John G Mccauley
 
-Are you ready? We'll do them in the middle of the lesson.
+Are you ready? We'll do them somewhere in the middle of the lesson.
+
+Introductions:
+==============
+
+Your TA: Subhiksha Mukuntharaj
+
+A few students that didn't get a chance to introduce themsleves last class:
+
+A tiny bit about yourself, your programming background, and why you want to learn Python. And your gitHub handle.
+
+- Sopheaktr L Danh
+- Nathan Marc Debard
+- Jin Han
+- James Roefs
+- Hua Shao
+- Quinn Yackulic
 
 
-Class Outline
-=============
+Getting set up, and Infrastructure
+==================================
+
+The primary goal of last week was to get you all set up to do development in Python. There were two components of that
 
 
-git / gitHub Classroom
-======================
+1) Your Workstation Development Environment
+-------------------------------------------
+
+You should all be now set up to run Create, Edit, and Run Python files, and have git running locally:
+
+* Programmer's Text Editor with linting enabled.
+
+* Command line terminal: Terminal, DOS box, gitBash
+  - Anyone try the new Windows Terminal?
+
+* git -- run from cammand line, or Tortoise git, or ...
+
+* cPython version 3.8.* or 3.9.*
+
+Have all of you got that running?
+
+(Zoom Poll ....)
+
+
+2) git / gitHub Classroom
+-------------------------
+
+The second, and harder part is gitHub classroom.
+
+Sorry about the false start -- it was buggy!
+
+But we've settled on a workflow, and hopefully it will suport that workflow consitently.
 
 In general, most of you seem to have got the basics down:
 
- - accepting the assignment
- - adding it to git
- - pushing it to your fork of the class repo
- - making a "pull request" on gitHub.
+ - Accepting the assignment
+ - Cloning the assignment repo onto your machine.
+ - Adding a file to git
+ - Commiting your changes
+ - Pushing your changes to gitHub.
 
-Any conceptual questions?
+Did you all get a gitHub Classroom repo working?
+
+(zoom poll)
+
+branching
+.........
+
+Now we need to add one more step: creating a branch to work in.
+
+The workflow you will be using in this class is published in the class "textbook" here:
+
+https://uwpce-pythoncert.github.io/ProgrammingInPython/topics/01-setting_up/github_classroom.html
+
+Let's run through the process with the first "real" assignment:
+
+Grid Printer
+
+Can I have a Volunteer?
+
+(you can all follow along ... )
+
+
+About git
+---------
+
+Now that we've done that, a few thoughts on git:
+
+Do you have any conceptual Questions?
+
 
 Notes:
 ------
@@ -59,7 +144,7 @@ Note in the status report::
 
     ...
 
-It even tells you want to do: use ``git add`` to stage particular files, or ``git checkout`` to revert a file back to its state as of the last commit. It doesn't mention ``git commit -a``, but that will commmit everyting that is "not staged for commit".
+It even tells you want to do: use ``git add`` to stage particular files, or ``git checkout`` to revert a file back to its state as of the last commit. It doesn't mention ``git commit -a``, but that will commmit everything that is "not staged for commit".
 
 If you are careful before the commit stage, then you won't have to "roll back" changes very often.
 
@@ -67,38 +152,61 @@ But if you do:
 
 https://uwpce-pythoncert.github.io/ProgrammingInPython/topics/01-setting_up/git_hints.html#backing-out-a-change
 
-Let's play around with that a bit.
+There are other nifty hints on that page, if you get stuck.
 
 
-Exceptions
-==========
+Break Time!
+===========
+
+10min break, then a few lightning talks:
+
+
+| Angela J Asgekar
+|
+| Kalana De Silva
+|
+| Devin Kiehl Duval
+
+
+
+Break Me
+========
 
 Most of you seemed to do fine making the few key exceptions -- any questions?
 
 **Note:**
 
-We were not expecting you to catch the exceptions -- we're really starting at the bottom here, just making sure you get used to seeing Exceptions, and what they mean.
+We were not expecting you to catch the exceptions -- we're really starting at the bottom here, just making sure you get used to seeing common exceptions, and what they mean.
 
 We'll get into Exception handling later.
 
+And yes, once you get a SyntaxError, nothing will run. That is the point. So commenting it out (or fixing it :-) ) after you get it fine.
 
-Coding Bat
-==========
-
-Anyone stuck on any of them?
-
-Anyone not like their solution?
-
-Let's talk about it!
-
-
-Lightning Talks
-===============
-
-Let's take a break and do some lightning talks...
 
 Now some new stuff
 ==================
+
+
+Coding Bat
+----------
+
+The coding bat sight is a great place to find some quick programming challeges:
+
+https://codingbat.com/python
+
+Let's do one -- and then you can play around on your own.
+
+Break Time!
+===========
+
+10min break, then two more lightning talks:
+
+|
+|Jason Emmett Hill
+|
+|John G Mccauley
+|
+
 
 Grid Printer
 ------------
