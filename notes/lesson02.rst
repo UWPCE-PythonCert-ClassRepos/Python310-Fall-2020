@@ -2,9 +2,10 @@
 
 .. _notes_lesson02:
 
-#################################
-10/20/2020: And to actual coding!
-#################################
+########################################
+10/20/2020: And now on to actual coding!
+########################################
+
 
 A collection of notes to go over in class, to keep things organized.
 
@@ -28,7 +29,6 @@ Up today:
 |
 | Jason Emmett Hill
 |
-| John G Mccauley
 
 Are you ready? We'll do them somewhere in the middle of the lesson.
 
@@ -166,8 +166,6 @@ Break Time!
 |
 | Kalana De Silva
 |
-| Devin Kiehl Duval
-
 
 
 Break Me
@@ -202,11 +200,11 @@ Break Time!
 
 10min break, then two more lightning talks:
 
+
+| Devin Kiehl Duval
 |
 | Jason Emmett Hill
-|
-| John G Mccauley
-|
+
 
 
 Grid Printer
