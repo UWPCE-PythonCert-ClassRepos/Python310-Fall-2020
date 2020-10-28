@@ -34,6 +34,7 @@ Are you ready? We'll do them in the middle of the lesson.
 Issues that came up during the week.
 ====================================
 
+
 gitHub "Failures"
 -----------------
 
@@ -206,7 +207,9 @@ They are in::
   solutions/Lesson02
 
 But before we do that -- code review / refactoring:
+
 Angela -- can we look at your code?
+
 
 
 
