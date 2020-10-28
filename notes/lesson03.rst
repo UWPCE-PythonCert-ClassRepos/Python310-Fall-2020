@@ -14,19 +14,19 @@ Lightning Talks
 Up today:
 
 From last week:
-|
-| Jason Emmett Hill
-|
+
+Jason Emmett Hill
+
 
 And then:
 
-| Jimmy Nguyen
-|
-|Brian H Wong
-|
-|Arielle Waller (Ari)
-|
-|Erik J Knighton
+Jimmy Nguyen
+
+Brian H Wong
+
+Arielle Waller (Ari)
+
+Erik J Knighton
 
 
 Are you ready? We'll do them in the middle of the lesson.
