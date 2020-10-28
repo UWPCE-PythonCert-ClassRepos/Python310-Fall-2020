@@ -2,9 +2,9 @@
 
 .. _notes_lesson03:
 
-####################
-Notes for lesson 03
-####################
+######################
+10/27/2020: Real code!
+######################
 
 A collection of notes to go over in class, to keep things organized.
 
