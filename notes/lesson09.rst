@@ -15,7 +15,13 @@ A collection of notes to go over in class, to keep things organized.
 Lightning Talks
 ===============
 
-Someone
+Christopher Duane Smith
+
+Maria Corazon M Dacutanan
+
+Akalpit Gadre
+
+Roohie Menon
 
 Issues that came up during the week.
 ====================================
@@ -58,7 +64,7 @@ Except not strings:
 
     TypeError: sum() can't sum strings [use ''.join(seq) instead]
 
-That's because you ``.join()`` is a lot more efficient.
+That's because ``.join()`` is a lot more efficient.
 
 
 "private" attributes and dunders
@@ -117,6 +123,7 @@ Any other html_render questions?
 --------------------------------
 
 Brian: still up for a code review / debug lesson?
+
 
 Magic Methods and Circle class
 ------------------------------

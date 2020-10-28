@@ -6,16 +6,16 @@ Maria G Berschauer: Python, VB github: berscm
 David Brandt: C#, javascript HTML, github: davidlbrandt
 Rudolph T Carvajal: Python, github rudycarvajal
 Maria Corazon M Dacutanan: powershell, perl, bash. github: mcmd08
-Sopheaktr L Danh:
+Sopheaktr L Danh: C, Java,   gitHub: sdanh
 Yazmery De Leon Guzman: C#, gitHub: yazmerydeleon
 Kalana De Silva: C++, Matlab, Python gitHub: 
-Nathan Marc Debard: 
+Nathan Marc Debard: C, C++, etc gitHub: nathandebard
 Devin Kiehl Duval: VBA, Python, Java: github: devinduval09
 Matthew Edoimioya (Matt): html, matlab, java, C github: mattbourne1
 Akalpit Gadre: C++, SQL, Python github: akkugadre
 Bishal Gupta: SQL, gitHub: sqlbish
 Scott Guyton: C#, SQL, JS, powershell, gihub: kiljoy001
-Jin Han:
+Jin Han: Python, Java, html gitHub: 
 Andrew Hanson: github: clichekhfan
 Jason Emmett Hill: perl bash, powershell, apache(python): github: 5th-gen-media
 Kelly Kauffman: Python, github: pythongal6295
@@ -30,11 +30,18 @@ Matt Parmett: Python, matlab, VBA, SQL github: mattparmett
 Vikram Raghavan: SQL, matlab github: vikragha
 James Roefs:
 Farhan Samani: Java, gitHub: farhansolo
-Hua Shao: 
+Hua Shao: Java, Python, C#  gitHub: hshao07
 Christopher Duane Smith: QBasic, JS, SQL, C#... github: daballachris 
 Shadle A Stewart:Matlab, bash, VBA, java github: shadlestewart
 Katrina Seok Taylor: katrinataylor
 Arielle Waller (Ari): matlab, python, SQL. github: ariellewaller
 Brian H Wong: html, JS, SQL, Python github: brianhwong206
-Quinn Johnson Yackulic:
+Quinn Johnson Yackulic: html, java  github: qyack00
+
+Micah Park: asm, C++ gitHub: parkm26
+
+
+python -m pip install ipython
+
+
 

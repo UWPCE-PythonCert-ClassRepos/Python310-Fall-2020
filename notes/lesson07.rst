@@ -14,7 +14,13 @@ A collection of notes to go over in class, to keep things organized.
 Lightning Talks
 ===============
 
-Someone
+Sopheaktr L Danh
+
+Bishal Gupta
+
+Maria G Berschauer
+
+Nathan Marc Debard
 
 Scheduling:
 ===========
