@@ -12,7 +12,13 @@ A collection of notes to go over in class, to keep things organized.
 Lightning Talks
 ===============
 
-someone ....
+| Hua Shao
+|
+| Vikram Raghavan
+|
+| Yazmery De Leon Guzman
+|
+| Matthew Edoimioya (Matt)
 
 
 Issues that came up during the week.

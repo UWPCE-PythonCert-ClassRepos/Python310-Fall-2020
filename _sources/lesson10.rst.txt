@@ -14,7 +14,13 @@ A collection of notes to go over in class, to keep things organized.
 Lightning Talks
 ===============
 
-Someone
+Huy Thanh Nguyen
+
+Jin Han
+
+Scott Guyton
+
+Andrew Hanson
 
 Issues that came up during the week.
 ====================================
@@ -39,8 +45,8 @@ What is wrong with this code? What is actually happening here??
 Let's check it out.
 
 
-When to make a method or property?
------------------------------------
+When to make a method vs. a property?
+-------------------------------------
 
 It is a good idea to make a property to access information in your class that requires "inside information", For example, in a Donor class:
 

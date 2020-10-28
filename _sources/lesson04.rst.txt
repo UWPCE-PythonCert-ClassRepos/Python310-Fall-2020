@@ -13,10 +13,17 @@ A collection of notes to go over in class, to keep things organized.
 Lightning Talks
 ===============
 
-Guy Chiu-Kai Chan
-Jae Kim
-Yaovi Metemey (obed)
-Zach Russell  Cooper
+| Quinn Yackulic
+|
+| Kelly Kauffman
+|
+| James Roefs
+|
+| Jonathan Paul Bednar
+|
+| Jeff Bennett
+
+
 
 Issues that came up during the week.
 ====================================
@@ -40,7 +47,7 @@ But there are also a LOT of "built in" names. Try::
 
     dir(__builtins__)
 
-You can use these names for variable, but when you do, it willwrite over the built-in one, which means that you then can't use it in the udual way. For instance, a ``list`` is the list type, you can make a list out of any sequence with it:
+You can use these names for a variable, but when you do, it will write over the built-in one, which means that you then can't use it in the usual way. For instance, ``list`` is the list type, you can make a list out of any sequence with it:
 
 .. code-block:: ipython
 
@@ -51,7 +58,7 @@ But if you use it as a name, it then won't work in the usual way:
 
 .. code-block:: ipython
 
-    In [7]: list = [1,2,3,4,5]
+    In [7]: list = [1, 2, 3, 4, 5]
 
     In [8]: list
     Out[8]: [1, 2, 3, 4, 5]
@@ -161,7 +168,7 @@ Let's look at this:
 
 ``examples/lesson04/recursive_mainloop.py``
 
-(do a ``git pull upstream master`` if you don't see it.)
+(do a ``git pull`` if you have a clone of this repo)
 
 Slicing and List labs
 ---------------------

@@ -35,9 +35,7 @@
 
     
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Notes for lesson 09" href="lesson09.html" />
-    <link rel="prev" title="Notes for lesson 07" href="lesson07.html" /> 
+    <link rel="search" title="Search" href="search.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -86,31 +84,9 @@
               
             
             
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="lesson01.html">Introduction to the the Python Certificate: Online version: Fall 2020</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lesson02.html">Notes for lesson 02</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lesson03.html">Notes for lesson 03</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lesson04.html">Notes for lesson 04</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lesson05.html">Notes for lesson 05</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lesson06.html">Notes for lesson 06</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lesson07.html">Notes for lesson 07</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Notes for lesson 08</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#lightning-talks-last">Lightning Talks (last)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#issues-that-came-up-during-the-week">Issues that came up during the week.</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#what-to-test-and-how">What to test? And how?</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#example">Example:</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#do-you-always-need-an-init">Do you always need an <code class="docutils literal notranslate"><span class="pre">__init__</span></code>?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#subclasses-and-self">Subclasses and <code class="docutils literal notranslate"><span class="pre">self</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#html-render">html_render</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#lightning-talks">Lightning Talks</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="lesson09.html">Notes for lesson 09</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lesson10.html">Notes for lesson 10</a></li>
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="lesson01.html">10/13/2020: Introduction to Py310: Programming in Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson02.html">10/20/2020: And now on to actual coding!</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="lightning_talks.html">Lightning Talks: Fall 2020 Class</a></li>
@@ -183,9 +159,12 @@
 <span id="notes-lesson08"></span><h1>Notes for lesson 08<a class="headerlink" href="#notes-for-lesson-08" title="Permalink to this headline">¶</a></h1>
 <p>1/27/2018</p>
 <p>A collection of notes to go over in class, to keep things organized.</p>
-<div class="section" id="lightning-talks-last">
-<h2>Lightning Talks (last)<a class="headerlink" href="#lightning-talks-last" title="Permalink to this headline">¶</a></h2>
-<p>someone</p>
+<div class="section" id="lightning-talks">
+<h2>Lightning Talks<a class="headerlink" href="#lightning-talks" title="Permalink to this headline">¶</a></h2>
+<p>David Brandt</p>
+<p>Matt Parmett</p>
+<p>Victor Alexander Orozco</p>
+<p>Shadle A Stewart</p>
 </div>
 <div class="section" id="issues-that-came-up-during-the-week">
 <h2>Issues that came up during the week.<a class="headerlink" href="#issues-that-came-up-during-the-week" title="Permalink to this headline">¶</a></h2>
@@ -219,8 +198,8 @@
 <div class="section" id="do-you-always-need-an-init">
 <h3>Do you always need an <code class="docutils literal notranslate"><span class="pre">__init__</span></code>?<a class="headerlink" href="#do-you-always-need-an-init" title="Permalink to this headline">¶</a></h3>
 <p>No – you don’t :-)</p>
-<p>The ONLY thing “special” about <code class="docutils literal notranslate"><span class="pre">__init__</span></code> is that it is automatically called when an instance is created.  Other than that, it’s a regular method. So if you don’t define one, then the superclass’ <code class="docutils literal notranslate"><span class="pre">__init__</span></code> will be called.</p>
-<p>That’s what inheritance is all about – the subclass inherits ALL the superclasses methods – including <code class="docutils literal notranslate"><span class="pre">__init__</span></code>.</p>
+<p>The ONLY thing “special” about <code class="docutils literal notranslate"><span class="pre">__init__</span></code> is that it is automatically called when an instance is created.  Other than that, it’s a regular method. So if you don’t define one, then the superclass’ <code class="docutils literal notranslate"><span class="pre">__init__</span></code> will be called. (and <code class="docutils literal notranslate"><span class="pre">object</span></code>, the default superclass, has a default one – so it’s always there somewhere).</p>
+<p>That’s what inheritance is all about – the subclass inherits ALL the superclasses’ methods – including <code class="docutils literal notranslate"><span class="pre">__init__</span></code>.</p>
 <p>So never write an <code class="docutils literal notranslate"><span class="pre">__init__</span></code> that does nothing but call the superclass <code class="docutils literal notranslate"><span class="pre">__init__</span></code></p>
 </div>
 <div class="section" id="subclasses-and-self">
@@ -234,10 +213,10 @@
 <p>Let’s look at up to step 3….</p>
 <p>And move along…</p>
 </div>
-<div class="section" id="lightning-talks">
-<h3>Lightning Talks<a class="headerlink" href="#lightning-talks" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id1">
+<h3>Lightning Talks<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p>Circle class…</p>
-<p><a class="reference external" href="https://uwpce-pythoncert.github.io/PythonCertDevel/modules/StaticAndClassMethods.html">https://uwpce-pythoncert.github.io/PythonCertDevel/modules/StaticAndClassMethods.html</a></p>
+<p><a class="reference external" href="https://uwpce-pythoncert.github.io/ProgrammingInPython/modules/StaticAndClassMethods.html#static-and-class-methods" title="(in Programming in Python)"><span>Static and Class Methods</span></a></p>
 </div>
 </div>
 </div>
@@ -247,15 +226,6 @@
            
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="lesson09.html" class="btn btn-neutral float-right" title="Notes for lesson 09" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="lesson07.html" class="btn btn-neutral float-left" title="Notes for lesson 07" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>

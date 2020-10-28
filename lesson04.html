@@ -35,9 +35,7 @@
 
     
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Notes for lesson 05" href="lesson05.html" />
-    <link rel="prev" title="Notes for lesson 03" href="lesson03.html" /> 
+    <link rel="search" title="Search" href="search.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -86,41 +84,9 @@
               
             
             
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="lesson01.html">Introduction to the the Python Certificate: Online version: Fall 2020</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lesson02.html">Notes for lesson 02</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lesson03.html">Notes for lesson 03</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Notes for lesson 04</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#lightning-talks">Lightning Talks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#issues-that-came-up-during-the-week">Issues that came up during the week.</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#built-in-names">Built in names</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#mutable-default-parameters">Mutable default parameters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#recursion-in-an-interactive-loop">Recursion in an interactive loop</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#slicing-and-list-labs">Slicing and List labs</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#altering-a-list-while-looping-through-it">Altering a list while looping through it</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#sorting">Sorting</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#my-solutions">My solutions</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#mailroom">mailroom</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#id1">Lightning Talks:</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#new-material">New Material</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#mailroom-part-2">mailroom part 2</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#trigrams">trigrams</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="lesson05.html">Notes for lesson 05</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lesson06.html">Notes for lesson 06</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lesson07.html">Notes for lesson 07</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lesson08.html">Notes for lesson 08</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lesson09.html">Notes for lesson 09</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lesson10.html">Notes for lesson 10</a></li>
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="lesson01.html">10/13/2020: Introduction to Py310: Programming in Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson02.html">10/20/2020: And now on to actual coding!</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="lightning_talks.html">Lightning Talks: Fall 2020 Class</a></li>
@@ -195,10 +161,17 @@
 <p>A collection of notes to go over in class, to keep things organized.</p>
 <div class="section" id="lightning-talks">
 <h2>Lightning Talks<a class="headerlink" href="#lightning-talks" title="Permalink to this headline">¶</a></h2>
-<p>Guy Chiu-Kai Chan
-Jae Kim
-Yaovi Metemey (obed)
-Zach Russell  Cooper</p>
+<div class="line-block">
+<div class="line">Quinn Yackulic</div>
+<div class="line"><br /></div>
+<div class="line">Kelly Kauffman</div>
+<div class="line"><br /></div>
+<div class="line">James Roefs</div>
+<div class="line"><br /></div>
+<div class="line">Jonathan Paul Bednar</div>
+<div class="line"><br /></div>
+<div class="line">Jeff Bennett</div>
+</div>
 </div>
 <div class="section" id="issues-that-came-up-during-the-week">
 <h2>Issues that came up during the week.<a class="headerlink" href="#issues-that-came-up-during-the-week" title="Permalink to this headline">¶</a></h2>
@@ -217,13 +190,13 @@ Zach Russell  Cooper</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="n">__builtins__</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>You can use these names for variable, but when you do, it willwrite over the built-in one, which means that you then can’t use it in the udual way. For instance, a <code class="docutils literal notranslate"><span class="pre">list</span></code> is the list type, you can make a list out of any sequence with it:</p>
+<p>You can use these names for a variable, but when you do, it will write over the built-in one, which means that you then can’t use it in the usual way. For instance, <code class="docutils literal notranslate"><span class="pre">list</span></code> is the list type, you can make a list out of any sequence with it:</p>
 <div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [6]: </span><span class="nb">list</span><span class="p">(</span><span class="s2">&quot;this&quot;</span><span class="p">)</span>
 <span class="gh">Out[6]: </span><span class="go">[&#39;t&#39;, &#39;h&#39;, &#39;i&#39;, &#39;s&#39;]</span>
 </pre></div>
 </div>
 <p>But if you use it as a name, it then won’t work in the usual way:</p>
-<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [7]: </span><span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [7]: </span><span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 
 <span class="gp">In [8]: </span><span class="nb">list</span>
 <span class="gh">Out[8]: </span><span class="go">[1, 2, 3, 4, 5]</span>
@@ -309,7 +282,7 @@ Out[22]: 1
 </div>
 <p>Let’s look at this:</p>
 <p><code class="docutils literal notranslate"><span class="pre">examples/lesson04/recursive_mainloop.py</span></code></p>
-<p>(do a <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span> <span class="pre">upstream</span> <span class="pre">master</span></code> if you don’t see it.)</p>
+<p>(do a <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code> if you have a clone of this repo)</p>
 </div>
 <div class="section" id="slicing-and-list-labs">
 <h3>Slicing and List labs<a class="headerlink" href="#slicing-and-list-labs" title="Permalink to this headline">¶</a></h3>
@@ -367,15 +340,6 @@ Out[22]: 1
            
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="lesson05.html" class="btn btn-neutral float-right" title="Notes for lesson 05" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="lesson03.html" class="btn btn-neutral float-left" title="Notes for lesson 03" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>

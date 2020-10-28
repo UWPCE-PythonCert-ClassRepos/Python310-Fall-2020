@@ -14,14 +14,20 @@ A collection of notes to go over in class, to keep things organized.
 Lightning Talks
 ===============
 
-Someone
+| Farhan Samani
+|
+| Katrina Seok Taylor
+|
+| Rudolph T Carvajal
+|
+| Rose Nyameke
 
 mailroom 4!!!!
 ==============
 
 **WTF?**
 
-What if Ihaven't gotten version 2 done yet???
+What if I haven't gotten version 2 done yet???
 
 
 Issues that came up during the week.
@@ -57,12 +63,13 @@ Let's look at a particularly nifty solution:
 quit()
 ------
 
-In my solution to mailroom, I created a function called ``quit`` to quit the program. THat is not a great idea, as there is a built-in called ``quit``.  In my defense, the ``quit()`` built-in didn't exist when I learned Python :-).
+In my solution to mailroom, I created a function called ``quit`` to quit the program. That is not a great idea, as there is a built-in called ``quit``.  In my defense, the ``quit()`` built-in didn't exist when I learned Python :-).
+
 
 ``readlines()`` ?
 -----------------
 
-quite a few of you have code like this:
+Quite a few of you have code like this:
 
 .. code-block:: python
 
@@ -88,16 +95,22 @@ That will loop though the file line by line, but only store one line at a time i
 
 And one less line of code :-)
 
-binary vs text files
+Binary vs text files
 --------------------
 
-``open()`` uses text mode (utf-8) by default. It will try to decode the file into text. If you open a binary file that way it will likely barf.
+``open()`` uses text mode (deafult encoding -- utf-8?) by default. It will try to decode the file into text. If you open a binary file that way it will likely barf.
 
-try: ``open(the_filename, 'rb'``
+::
+
+open(the_filename, 'rb'
+
+Is the way to open a binary file (note the "b") -- this weill read the bytes in the file, with no alteration.
 
 For more on what "decode" means:
 
-`Unicode in Python <https://uwpce-pythoncert.github.io/PythonCertDevel/modules/Unicode.html?highlight=unicode>`_
+:ref:`unicode`
+
+.. PythonCertDevel/modules/Unicode.html?highlight=unicode>`_
 
 
 Any Questions about the homework -- or anything?
@@ -131,9 +144,10 @@ Let's explore it a bit.
 
 AND -- we'll use TDD to do it.
 
-Exercise here:
+Exercise in the class notes here:
 
-https://uwpce-pythoncert.github.io/PythonCertDevel/exercises/args_kwargs_lab.html
+:ref:`exercise_args_kwargs_lab`
+
 
 
 

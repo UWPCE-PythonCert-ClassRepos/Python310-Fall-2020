@@ -11,10 +11,16 @@ Notes for lesson 08
 
 A collection of notes to go over in class, to keep things organized.
 
-Lightning Talks (last)
-======================
+Lightning Talks
+===============
 
-someone
+David Brandt
+
+Matt Parmett
+
+Victor Alexander Orozco
+
+Shadle A Stewart
 
 Issues that came up during the week.
 ====================================
@@ -59,9 +65,9 @@ Do you always need an ``__init__``?
 
 No -- you don't :-)
 
-The ONLY thing "special" about ``__init__`` is that it is automatically called when an instance is created.  Other than that, it's a regular method. So if you don't define one, then the superclass' ``__init__`` will be called.
+The ONLY thing "special" about ``__init__`` is that it is automatically called when an instance is created.  Other than that, it's a regular method. So if you don't define one, then the superclass' ``__init__`` will be called. (and ``object``, the default superclass, has a default one -- so it's always there somewhere).
 
-That's what inheritance is all about -- the subclass inherits ALL the superclasses methods -- including ``__init__``.
+That's what inheritance is all about -- the subclass inherits ALL the superclasses' methods -- including ``__init__``.
 
 So never write an ``__init__`` that does nothing but call the superclass ``__init__``
 
@@ -92,4 +98,5 @@ Circle class...
 
 .. Coming from Java/C++, this was always confusing to me. Now I think I understand this better, and I may share my understanding and realization with class. Let's go over the static/class methods materials:
 
-https://uwpce-pythoncert.github.io/PythonCertDevel/modules/StaticAndClassMethods.html
+:ref:`static_and_class_methods`
+
