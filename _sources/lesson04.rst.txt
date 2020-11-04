@@ -32,6 +32,9 @@ And the Solutions are in teh gitHub project:
 https://github.com/UWPCE-PythonCert-ClassRepos/Python310-Fall-2020
 
 
+Quick Poll: how many of you have a clone of that repo on your machine?
+
+
 Issues that came up during the week.
 ====================================
 
@@ -44,9 +47,12 @@ https://www.python.org/dev/peps/pep-0008/
 
 The ONLY exception is if you work in an organization that has a different style guide. It can make sense for your python code to match other code in an organization. But otherwise, use a style consistent with the rest of the Python world.
 
+The best way to do this is with a linter in your editor -- like the Anaconda package in Sublime. If you are getting annoyed by all the "noise" that the linter creates -- keep your code in PEP8 style, it won't be there!
+
 And don't use "Hungarian Notation" -- it is really non-pythonic, and sometimes actually wrong -- and a string called ``intSomething`` just adds confusion!
 
-The best way to do this is with a linter in your editor -- like the Anaconda package in Sublime. If you are getting annoyed by all the "noise" that the linter creates -- keep your code in PEP8 style, it won't be there!
+
+Also: use meaningful names, not "item" or "tup" or ....
 
 
 Built in names
