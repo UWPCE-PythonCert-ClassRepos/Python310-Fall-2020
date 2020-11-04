@@ -19,20 +19,21 @@ def fibonacci(n):
             fibList.append(i)
     print(fibList[n-1])
 
+
 def lucas(n):
     """return nth place of Lucas series"""
     lucList = []
     if n == 1:
         lucList = [2]
     elif n == 2:
-        lucList = [2,1]
+        lucList = [2, 1]
     else:
-        lucList = [2,1]
+        lucList = [2, 1]
         while len(lucList) < n:
             x = len(lucList)
             i = lucList[x - 2] + lucList[x - 1]
             lucList.append(i)
-    print(lucList[n-1])
+    print(lucList[n - 1])
 
 
 def sum_series(n, n0=0, n1=1):

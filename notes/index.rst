@@ -20,7 +20,7 @@ Notes for each Lesson
 
     lesson01
     lesson02
-..    lesson03
+    lesson03
 ..    lesson04
 ..    lesson05
 ..    lesson06

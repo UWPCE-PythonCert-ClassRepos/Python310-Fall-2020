@@ -2,9 +2,9 @@
 
 .. _notes_lesson03:
 
-####################
-Notes for lesson 03
-####################
+######################
+10/27/2020: Real code!
+######################
 
 A collection of notes to go over in class, to keep things organized.
 
@@ -33,6 +33,12 @@ Are you ready? We'll do them in the middle of the lesson.
 
 Issues that came up during the week.
 ====================================
+
+MS Teams
+--------
+
+Are you all on it? 
+
 
 gitHub "Failures"
 -----------------
@@ -129,6 +135,7 @@ From print_grid: if you are going to have separate functions, better for them to
 
 This is a tiny example of what's known as "separation of concerns"
 
+
 ``for`` vs ``while``
 --------------------
 
@@ -194,6 +201,19 @@ So "is" will work as a test for small integers, but not large ones:
 **Important:** This is an implementation detail. Do not count on it!
 
 
+Lightning Talks
+===============
+
+Let's take a break and do some of the  lightning talks...
+
+
+Jason Hill
+
+Jimmy Nguyen
+
+Brian H Wong
+
+
 Review Solutions
 ================
 
@@ -206,21 +226,22 @@ They are in::
   solutions/Lesson02
 
 But before we do that -- code review / refactoring:
+
 Angela -- can we look at your code?
+
+
+Coding Bat
+----------
+
+Anyone get stuck on any and want to give it a look?
 
 
 
 Lightning Talks
 ===============
 
-Let's take a break and do the  lightning talks...
+Let's take a break and do the rest of the  lightning talks...
 
-
-Jason Hill
-
-Jimmy Nguyen
-
-Brian H Wong
 
 Ari Waller
 
