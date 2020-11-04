@@ -21,6 +21,8 @@ Week 3
 Week 4
 ------
 
+James: assorted history - robotics
+Jeff Bennett -- Unicode and encoding / decoding
 
 Week 5
 ------

@@ -138,7 +138,7 @@ for datum in data:
     name = datum[0]
     age = datum[1]
     cost = "${:,.2f}".format(datum[2])
-    print(f"{name:{name_len}s} {age:4d} {cost:>10s}")
+    print(f"{name:{name_len+2}s} {age:4d} {cost:>10s}")
 
 
 

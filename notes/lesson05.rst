@@ -47,6 +47,19 @@ And don't use "Hungarian Notation" -- it is really non-pythonic, and sometimes a
 The best way to do this is with a linter in your editor -- like the Anaconda package in Sublime. A number of you are getting really annoyed by all the "noise" that the linter creates. But if you keep your code in PEP8 style, it won't be there!
 
 
+mailroom part 2
+---------------
+
+How might you use dictionaries in mailroom? If you haven't finished it without dicts, why not add them now?
+
+trigrams
+--------
+
+This is a really fun one -- but challenging.
+
+Let's get a start on it!
+
+
 Minor Issues
 ------------
 
