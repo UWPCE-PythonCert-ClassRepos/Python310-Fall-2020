@@ -2,11 +2,10 @@
 
 .. _notes_lesson04:
 
-####################
-Notes for lesson 04
-####################
+#############################
+11/02/2020: A actual Program!
+#############################
 
-10/30/2018
 
 A collection of notes to go over in class, to keep things organized.
 
@@ -24,9 +23,31 @@ Lightning Talks
 | Jeff Bennett
 
 
+As usual, these notes are published here:
+
+https://uwpce-pythoncert-classrepos.github.io/Python310-Fall-2020/
+
+And the Solutions are in teh gitHub project:
+
+https://github.com/UWPCE-PythonCert-ClassRepos/Python310-Fall-2020
+
 
 Issues that came up during the week.
 ====================================
+
+Style
+-----
+
+Use PEP8 style -- really!
+
+https://www.python.org/dev/peps/pep-0008/
+
+The ONLY exception is if you work in an organization that has a different style guide. It can make sense for your python code to match other code in an organization. But otherwise, use a style consistent with the rest of the Python world.
+
+And don't use "Hungarian Notation" -- it is really non-pythonic, and sometimes actually wrong -- and a string called ``intSomething`` just adds confusion!
+
+The best way to do this is with a linter in your editor -- like the Anaconda package in Sublime. If you are getting annoyed by all the "noise" that the linter creates -- keep your code in PEP8 style, it won't be there!
+
 
 Built in names
 --------------
@@ -104,9 +125,11 @@ Mutable default parameters
 
 There was a video on this -- any questions about it?
 
-If not then we'll move on...
+If not then we'll move on ...
 
-This is a real "gotcha" in Python. Someone wrote a non-recursive solution to the sum_series problem. It worked great -- EXCEPT if it got called more than once! Any idea what the problem is?
+But if you are confused ....
+
+This is a real "gotcha" in Python. Someone (in a previous class) wrote a non-recursive solution to the sum_series problem. It worked great -- EXCEPT if it got called more than once! Any idea what the problem is?
 
 (``examples\lesson04\series_with_mutable.py``)
 
@@ -151,7 +174,7 @@ Let's explore that some more, and some solutions....
 Recursion in an interactive loop
 --------------------------------
 
-not a great idea!
+Not a great idea!
 
 you can do something like:
 
@@ -168,12 +191,26 @@ Let's look at this:
 
 ``examples/lesson04/recursive_mainloop.py``
 
-(do a ``git pull`` if you have a clone of this repo)
+(do a ``git pull`` if you have a clone of the class repo)
+
+
+Lightning Talks
+===============
+
+let's take a break, and then:
+
+| Quinn Yackulic
+|
+| Kelly Kauffman
+|
+| James Roefs
+
 
 Slicing and List labs
 ---------------------
 
 Any questions?
+
 
 Altering a list while looping through it
 ........................................
@@ -197,10 +234,17 @@ Anyone confused about sorting? Shall we go over it?
 
 ``examples/lesson04/sort_example.py``
 
+
+String Formatting
+-----------------
+
+Are you starting to get it? There is a LOT there. But it lets you do some fancy stuff with not much code.
+
+
 My solutions
 ------------
 
-Let's look at my solutions quickly.
+Let's look at some solutions quickly.
 
 mailroom
 ........
@@ -212,28 +256,54 @@ Should we look at my solution -- or review one of yours?
 Or wait ?
 
 
-Lightning Talks:
-----------------
+Lightning Talks
+===============
 
-Let's take a break and do them...
+| Jonathan Paul Bednar
+|
+| Jeff Bennett
+
+
 
 New Material
 ============
 
-Any questions on dictionaries, set or files?
+Any questions on
 
-This gets fun now!
+Unit Testing or Exceptions?
 
-mailroom part 2
----------------
+(we'll start some in class)
 
-How might you use dictionaries in mailroom? If you haven't finished it without dicts, why not add them now?
 
-trigrams
---------
+Unit Testing and TDD
+--------------------
 
-This is a really fun one -- but challenging.
+Compared to most Python courses, we are introducing unit testing really early. In fact, earlier that we used to in this class, which was already early.
 
-Let's get a start on it!
+But it is a REALLY good habit to get into, and, in fact, can help beginners just  as much (maybe more) than more experienced developers. 
+
+
+Exceptions
+----------
+
+Let's do the Exceptions Lab in class:
+
+https://uwpce-pythoncert.github.io/ProgrammingInPython/exercises/exceptions/exceptions_lab.html
+
+
+Testing Mailroom 
+----------------
+
+Key point here: 
+
+You **will** need to refactor your code in order to make it testable.
+
+That is a "Good Thing"
+
+Well structured code is testable : testable code is (Probably) well structured.
+
+This is one reason we're introducing unit tests right now.
+
+Shall we get a start on that together?
 
 

@@ -8,11 +8,12 @@ This code will work -- but not a great idea!
 
 import sys
 
-
 def mainloop():
     while True:
-        ans = input('type "a", "b", or "quit"')
-        if ans == "a":
+        ans = input('type "a", "b", or "quit" > ')
+        if not ans:
+            continue
+        elif ans == "a":
             print("you typed a")
         elif ans == "b":
             print("going to second loop")
@@ -23,25 +24,25 @@ def mainloop():
             # break
             sys.exit()  # what if I use the break, rather than the exit()?
         elif ans[0] == "r":  # here to test recursion...
-            raise Exception()
-        # else:  # no expected response -- start the loop again
-        #     mainloop()
+            raise Exception("you typed r")
+        else:  # no expected response -- start the loop again
+            mainloop()
 
 
 def second_loop():
     ans = ""
     while not ans == "g":
-        ans = input('second loop: type "a", "b", or "go back')
-        if ans == "a":
+        ans = input('second loop: type "a", "b", or "go back" > ')
+        if not ans:
+            continue
+        elif ans == "a":
             print("you typed a")
         elif ans == "b":
             second_loop()
-        # elif ans[0] == "g":
-        #     return
-        # break
-            # mainloop()
-
-
+        elif ans[0] == "g":
+            mainloop()
+        else:
+            continue
 
 if __name__ == "__main__":
     mainloop()

@@ -17,9 +17,15 @@ donor_db = [("William Gates, III", [653772.32, 12.17]),
             ]
 
 # Let's see how it works:
+print("Sorted with the default")
+print(sorted(donor_db))
+print()
+
 print("Sorted the regular way")
 print(sorted(donor_db, key=sort_key))
 print()
+
 print("Reverse Sorted:")
 print(sorted(donor_db, key=sort_key, reverse=True))
+print()
 

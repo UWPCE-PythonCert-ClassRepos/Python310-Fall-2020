@@ -1,4 +1,4 @@
-def sum_series(nth=1, sequence=(0, 1)):
+def sum_series(nth=1, sequence=[0, 1]):
     """
     Generate a list of sums given a seed and return the Nth number.
     """
@@ -7,3 +7,5 @@ def sum_series(nth=1, sequence=(0, 1)):
         sequence.append(sequence[i-2] + sequence[i-1])
     print(sequence)
     return sequence[nth-1]
+
+
