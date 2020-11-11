@@ -219,7 +219,8 @@ Time Check: I do want to have time to get to the new stuff!
 
 If there is time:
 
-Review Shadel's Code? or mine?
+Review Shadel's Code? or someone else's?
+
 
 
 Packaging and Modules
