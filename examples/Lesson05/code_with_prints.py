@@ -8,4 +8,4 @@ def really_simple():
 
 
 def almost_as_simple(x):
-    print("-*-" * x)
+    print("-*-" * x, end="")
