@@ -87,6 +87,9 @@
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="lesson01.html">10/13/2020: Introduction to Py310: Programming in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lesson02.html">10/20/2020: And now on to actual coding!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson03.html">10/27/2020: Real code!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson04.html">11/02/2020: A actual Program!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson05.html">Nov 19th, 2020: testing, testing, 1, 2, 3</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="lightning_talks.html">Lightning Talks: Fall 2020 Class</a></li>
@@ -170,6 +173,11 @@
 <div class="line"><br /></div>
 <div class="line">Rose Nyameke</div>
 </div>
+<div class="section" id="comprehensions">
+<h3>Comprehensions<a class="headerlink" href="#comprehensions" title="Permalink to this headline">¶</a></h3>
+<p>Let’s take a few minutes to go through it in class:</p>
+<p><a class="reference external" href="https://uwpce-pythoncert.github.io/PythonCertDevel/exercises/comprehensions_lab.html">https://uwpce-pythoncert.github.io/PythonCertDevel/exercises/comprehensions_lab.html</a></p>
+</div>
 </div>
 <div class="section" id="mailroom-4">
 <h2>mailroom 4!!!!<a class="headerlink" href="#mailroom-4" title="Permalink to this headline">¶</a></h2>
@@ -178,6 +186,60 @@
 </div>
 <div class="section" id="issues-that-came-up-during-the-week">
 <h2>Issues that came up during the week.<a class="headerlink" href="#issues-that-came-up-during-the-week" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="minor-issues">
+<h3>Minor Issues<a class="headerlink" href="#minor-issues" title="Permalink to this headline">¶</a></h3>
+<p>Remember that:</p>
+<p><code class="docutils literal notranslate"><span class="pre">something</span> <span class="pre">in</span> <span class="pre">a_dict</span></code> checks if <code class="docutils literal notranslate"><span class="pre">something</span></code> is a key</p>
+<p>similarly:</p>
+<p><code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">k</span> <span class="pre">in</span> <span class="pre">dict:</span></code></p>
+<p>loops through the keys. So no need for:</p>
+<p><code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">k</span> <span class="pre">in</span> <span class="pre">dict.keys():</span></code></p>
+</div>
+<div class="section" id="getting-an-arbitrary-key-from-a-dict">
+<h3>Getting an arbitrary key from a dict<a class="headerlink" href="#getting-an-arbitrary-key-from-a-dict" title="Permalink to this headline">¶</a></h3>
+<p>See <code class="docutils literal notranslate"><span class="pre">arbitrary_key.py</span></code> in <cite>examples/lesson05</cite></p>
+</div>
+<div class="section" id="nifty-formatting">
+<h3>nifty formatting<a class="headerlink" href="#nifty-formatting" title="Permalink to this headline">¶</a></h3>
+<p>what the heck is this?</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">data_print</span><span class="p">(</span><span class="n">info</span><span class="p">,</span> <span class="n">widths</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    takes in donor information and widths and returns a string formatted for</span>
+<span class="sd">    printing for a donor report.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">output_string</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">output_string</span> <span class="o">+=</span> <span class="s1">&#39;{:&lt;</span><span class="si">{width0}</span><span class="s1">} ${:&gt;</span><span class="si">{width1}</span><span class="s1">.2f} {:^</span><span class="si">{width2}</span><span class="s1">} ${:&gt;</span><span class="si">{width3}</span><span class="s1">}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">info</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">info</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">info</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">info</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">width0</span><span class="o">=</span><span class="n">widths</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">width1</span><span class="o">=</span><span class="n">widths</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">width2</span><span class="o">=</span><span class="n">widths</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">width3</span><span class="o">=</span><span class="n">widths</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>cleaned up a bit:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;{:&lt;</span><span class="si">{widths[0]}</span><span class="s1">} ${:&gt;</span><span class="si">{widths[1]}</span><span class="s1">.2f}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span> <span class="s2">&quot;fred&quot;</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">widths</span><span class="o">=</span><span class="n">widths</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="islice">
+<h3>islice<a class="headerlink" href="#islice" title="Permalink to this headline">¶</a></h3>
+<p>This constuct is pertty cool for trigrams:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">w1</span><span class="p">,</span> <span class="n">w2</span><span class="p">,</span> <span class="n">w3</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">word_list</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">],</span> <span class="n">word_list</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">word_list</span><span class="p">[</span><span class="mi">2</span><span class="p">:]):</span>
+</pre></div>
+</div>
+<p>but remeber that slicing makes a copy – so this is making three copies of the full work list. Computers have a LOT of memory these days, but it’s still better to not waste it.</p>
+<p>Turns out there is a alternative:</p>
+<p><a class="reference external" href="https://docs.python.org/3.7/library/itertools.html#itertools.islice">https://docs.python.org/3.7/library/itertools.html#itertools.islice</a></p>
+</div>
+<div class="section" id="coding-workflow">
+<h3>Coding Workflow<a class="headerlink" href="#coding-workflow" title="Permalink to this headline">¶</a></h3>
+<p>As you are developing your code, you <em>really</em> want to have an quick and efficient way to run you code and see if it’s working, how it’s changed, etc.</p>
+<p>You may have noticed that for a program like Mailroom, you may have to do a few steps if user interaction to get to the part of the code you are working on. So how do you work on that efficiently?</p>
+<p>The “right” way to do it is something called “Test Driven Development”, which we will get to soon. But in the meantime:</p>
+<ul class="simple">
+<li><p>You want to break your code down into small functions that each do one thing.</p></li>
+<li><p>You should be able to run each function by itself.</p></li>
+</ul>
+<p>If you are doing that, then as you develop your code, you can write and run each function until it’s doing what it’s supposed to do, and THEN put it all together.</p>
+<p>One way to run a function is to call it in the <code class="docutils literal notranslate"><span class="pre">__name__</span> <span class="pre">==</span> <span class="pre">&quot;__main__&quot;</span></code> block. You can then comment and uncomment each call as you work on your code.</p>
+<p>Also: you really, really need a way to run your code with a couple keystrokes!!</p>
+<p>I’ll demonstrate this when we review code.</p>
+</div>
 <div class="section" id="looping-through-a-dict">
 <h3>looping through a dict<a class="headerlink" href="#looping-through-a-dict" title="Permalink to this headline">¶</a></h3>
 <p>If you need just the keys:</p>
@@ -224,12 +286,14 @@
 </pre></div>
 </div>
 <p>That will loop though the file line by line, but only store one line at a time in memory.  The file system and disk should have a smart cache, so that it will be just as fast, but more memory efficient.</p>
-<p>And one less line of code :-)</p>
+<p>And one less line of code …</p>
 </div>
 <div class="section" id="binary-vs-text-files">
 <h3>Binary vs text files<a class="headerlink" href="#binary-vs-text-files" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">open()</span></code> uses text mode (deafult encoding – utf-8?) by default. It will try to decode the file into text. If you open a binary file that way it will likely barf.</p>
-<p>open(the_filename, ‘rb’</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">open</span><span class="p">(</span><span class="n">the_filename</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span>
+</pre></div>
+</div>
 <p>Is the way to open a binary file (note the “b”) – this weill read the bytes in the file, with no alteration.</p>
 <p>For more on what “decode” means:</p>
 <p><a class="reference external" href="https://uwpce-pythoncert.github.io/ProgrammingInPython/modules/Unicode.html#unicode" title="(in Programming in Python)"><span>Unicode in Python</span></a></p>
