@@ -3,22 +3,26 @@
 
 .. _notes_lesson06:
 
-####################
-Notes for lesson 06
-####################
+##############################
+11/17/2020: Odd senstences ...
+##############################
 
-11/13/2018
 
 A collection of notes to go over in class, to keep things organized.
 
 Lightning Talks
 ===============
 
+From last week:
+
+
+| Hua Shao
+|
+| Vikram Raghavan
+|
 | Farhan Samani
 |
 | Katrina Seok Taylor
-|
-| Rudolph T Carvajal
 |
 | Rose Nyameke
 
@@ -31,13 +35,26 @@ Let's take a few minutes to go through it in class:
 
 https://uwpce-pythoncert.github.io/PythonCertDevel/exercises/comprehensions_lab.html
 
+Comprehensive Testing
+=====================
 
-mailroom 4!!!!
-==============
+Comprehensive testing is HARD. IN fact, it's impossible.
 
-**WTF?**
+We do what we can -- but what to do when you find a hole?
 
-What if I haven't gotten version 2 done yet???
+In the supplied tests for trigrams, there was a test for make_sentence(): That's a tricky one, as it's supposed to be random. So it tested for some aspects of what the function returned, but very much missed some!
+
+For example, one of you found:
+
+"... ``make_sentence()`` function always returns 'Blind blind blind blind blind blind.' with test_dict"
+
+Oops! that's clearly wrong. So what to do?
+
+First -- maybe that wasn't very comprehensive test to begin with -- sorry.
+
+But your tests will nver be comprehensive -- you will find bugs after teh fact. So the when you do, the first thing to do is write a test that exercises that bug -- i.e. one that does fail with your broken code.
+
+
 
 
 Issues that came up during the week.
@@ -63,7 +80,8 @@ loops through the keys. So no need for:
 Getting an arbitrary key from a dict
 ------------------------------------
 
-See ``arbitrary_key.py`` in `examples/lesson05`
+See ``arbitrary_key.py`` in `examples/lesson06`
+
 
 nifty formatting
 ----------------
@@ -87,11 +105,11 @@ cleaned up a bit::
 islice
 ------
 
-This constuct is pertty cool for trigrams::
+This constuct is pretty cool for trigrams::
 
   for w1, w2, w3 in zip(word_list[:-2], word_list[1:-1], word_list[2:]):
 
-but remeber that slicing makes a copy -- so this is making three copies of the full work list. Computers have a LOT of memory these days, but it's still better to not waste it.
+But remember that slicing makes a copy -- so this is making three copies of the full word list. Computers have a LOT of memory these days, but it's still better to not waste it.
 
 Turns out there is a alternative:
 
