@@ -3,9 +3,9 @@
 
 .. _notes_lesson06:
 
-##############################
-11/17/2020: Odd senstences ...
-##############################
+#############################
+11/17/2020: Odd sentences ...
+#############################
 
 
 A collection of notes to go over in class, to keep things organized.
@@ -26,19 +26,41 @@ From last week:
 |
 | Rose Nyameke
 
+Notes on Testing
+================
 
-Comprehensions
+Isolated tests
 --------------
 
+Each test should be isolated -- so that it doesn't rely on any other tests running first, or break any tests that come after it.
 
-Let's take a few minutes to go through it in class:
+So how do you do that with test data that might change -- like a test for adding a new donor?
 
-https://uwpce-pythoncert.github.io/PythonCertDevel/exercises/comprehensions_lab.html
+If you put some test data in a function:
+
+.. code-block:: python
+
+    def get_test_db():
+        return {'william gates iii': ("William Gates III", [653772.32, 12.17]),
+                'jeff bezos': ("Jeff Bezos", [877.33]),
+                'paul allen': ("Paul Allen", [663.23, 43.87, 1.32]),
+                'mark zuckerberg': ("Mark Zuckerberg", [1663.23, 4300.87, 10432.0]),
+                }
+
+Then, in each test that needs a donor_db:
+
+.. code-block:: python
+
+    def test_something():
+        # get a clean one to work with.
+        db = get_test_db
+
+This is a simple example of a "fixture". pytest has features to make more complex fixtures -- but this will do for now.
 
 Comprehensive Testing
-=====================
+---------------------
 
-Comprehensive testing is HARD. IN fact, it's impossible.
+Comprehensive testing is HARD. In fact, it's impossible.
 
 We do what we can -- but what to do when you find a hole?
 
@@ -53,6 +75,8 @@ Oops! that's clearly wrong. So what to do?
 First -- maybe that wasn't very comprehensive test to begin with -- sorry.
 
 But your tests will nver be comprehensive -- you will find bugs after teh fact. So the when you do, the first thing to do is write a test that exercises that bug -- i.e. one that does fail with your broken code.
+
+
 
 
 
@@ -172,6 +196,15 @@ quit()
 
 In my solution to mailroom, I created a function called ``quit`` to quit the program. That is not a great idea, as there is a built-in called ``quit``.  In my defense, the ``quit()`` built-in didn't exist when I learned Python :-).
 
+what does "global" mean?
+------------------------
+
+There is a "global" namespace, and there is the ``global`` keyword. What is the difference? when do you need to use ``global``?
+
+TL;DR : There is nothing wrong with using global names -- but you VERY RARELY should use the ``global`` keyword!
+
+(Devin's example)
+
 
 ``readlines()`` ?
 -----------------
@@ -232,15 +265,15 @@ review mailroom?
 Break and Lightning talks
 =========================
 
+New material:
+=============
 
-Testing?
---------
+Comprehensions
+--------------
 
-Did y'all do the testing exercise with a coding bat example?
+Let's take a few minutes to go through it in class:
 
-We could do one now.
-
-Or...
+https://uwpce-pythoncert.github.io/ProgrammingInPython/exercises/comprehensions_lab.html
 
 
 Advanced Argument Passing
@@ -254,7 +287,7 @@ AND -- we'll use TDD to do it.
 
 Exercise in the class notes here:
 
-:ref:`exercise_args_kwargs_lab`
+https://uwpce-pythoncert.github.io/ProgrammingInPython/exercises/args_kwargs_lab.html
 
 
 
