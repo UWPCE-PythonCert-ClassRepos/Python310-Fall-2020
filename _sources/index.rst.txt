@@ -23,7 +23,7 @@ Notes for each Lesson
     lesson03
     lesson04
     lesson05
-..    lesson06
+    lesson06
 ..    lesson07
 ..    lesson08
 ..    lesson09

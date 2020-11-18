@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Notes for lesson 06 &mdash; IntroToPython: Fall 2020 1.0 documentation</title>
+  <title>11/17/2020: Odd sentences … &mdash; IntroToPython: Fall 2020 1.0 documentation</title>
   
 
   
@@ -35,7 +35,9 @@
 
     
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Lightning Talks: Fall 2020 Class" href="lightning_talks.html" />
+    <link rel="prev" title="11/19/2020: testing, testing, 1, 2, 3" href="lesson05.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -84,12 +86,45 @@
               
             
             
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="lesson01.html">10/13/2020: Introduction to Py310: Programming in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lesson02.html">10/20/2020: And now on to actual coding!</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lesson03.html">10/27/2020: Real code!</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lesson04.html">11/02/2020: A actual Program!</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lesson05.html">Nov 19th, 2020: testing, testing, 1, 2, 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson05.html">11/19/2020: testing, testing, 1, 2, 3</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">11/17/2020: Odd sentences …</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#lightning-talks">Lightning Talks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#coding-workflow">Coding Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#notes-on-testing">Notes on Testing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#isolated-tests">Isolated tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#comprehensive-testing">Comprehensive Testing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#minor-issues-that-came-up-during-the-week">Minor issues that came up during the week.</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#what-does-in-a-dict-mean">What does “in a dict” mean?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#looping-through-a-dict">Looping through a dict</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getting-an-arbitrary-key-from-a-dict">Getting an arbitrary key from a dict</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#islice">islice</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Lightning Talks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mailroom-issues">Mailroom issues:</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#dict-as-switch-how-do-you-leave-the-loop">dict as switch – how do you leave the loop?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#what-does-global-mean">what does “global” mean?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#readlines"><code class="docutils literal notranslate"><span class="pre">readlines()</span></code> ?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#binary-vs-text-files">Binary vs text files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#any-questions-about-the-homework-or-anything">Any Questions about the homework – or anything?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#break-and-lightning-talks">Break and Lightning talks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#new-material">New material:</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#comprehensions">Comprehensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#advanced-argument-passing">Advanced Argument Passing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#modules-and-packages">Modules and Packages</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="lightning_talks.html">Lightning Talks: Fall 2020 Class</a></li>
@@ -139,7 +174,7 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Notes for lesson 06</li>
+      <li>11/17/2020: Odd sentences …</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -158,90 +193,94 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="notes-for-lesson-06">
-<span id="notes-lesson06"></span><h1>Notes for lesson 06<a class="headerlink" href="#notes-for-lesson-06" title="Permalink to this headline">¶</a></h1>
-<p>11/13/2018</p>
+  <div class="section" id="odd-sentences">
+<span id="notes-lesson06"></span><h1>11/17/2020: Odd sentences …<a class="headerlink" href="#odd-sentences" title="Permalink to this headline">¶</a></h1>
 <p>A collection of notes to go over in class, to keep things organized.</p>
 <div class="section" id="lightning-talks">
 <h2>Lightning Talks<a class="headerlink" href="#lightning-talks" title="Permalink to this headline">¶</a></h2>
 <div class="line-block">
+<div class="line">Rose Nyameke</div>
+<div class="line"><br /></div>
+<div class="line">Hua Shao</div>
+<div class="line"><br /></div>
+<div class="line">Vikram Raghavan</div>
+<div class="line"><br /></div>
 <div class="line">Farhan Samani</div>
 <div class="line"><br /></div>
 <div class="line">Katrina Seok Taylor</div>
 <div class="line"><br /></div>
-<div class="line">Rudolph T Carvajal</div>
-<div class="line"><br /></div>
-<div class="line">Rose Nyameke</div>
 </div>
-<div class="section" id="comprehensions">
-<h3>Comprehensions<a class="headerlink" href="#comprehensions" title="Permalink to this headline">¶</a></h3>
-<p>Let’s take a few minutes to go through it in class:</p>
-<p><a class="reference external" href="https://uwpce-pythoncert.github.io/PythonCertDevel/exercises/comprehensions_lab.html">https://uwpce-pythoncert.github.io/PythonCertDevel/exercises/comprehensions_lab.html</a></p>
-</div>
-</div>
-<div class="section" id="mailroom-4">
-<h2>mailroom 4!!!!<a class="headerlink" href="#mailroom-4" title="Permalink to this headline">¶</a></h2>
-<p><strong>WTF?</strong></p>
-<p>What if I haven’t gotten version 2 done yet???</p>
-</div>
-<div class="section" id="issues-that-came-up-during-the-week">
-<h2>Issues that came up during the week.<a class="headerlink" href="#issues-that-came-up-during-the-week" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="minor-issues">
-<h3>Minor Issues<a class="headerlink" href="#minor-issues" title="Permalink to this headline">¶</a></h3>
-<p>Remember that:</p>
-<p><code class="docutils literal notranslate"><span class="pre">something</span> <span class="pre">in</span> <span class="pre">a_dict</span></code> checks if <code class="docutils literal notranslate"><span class="pre">something</span></code> is a key</p>
-<p>similarly:</p>
-<p><code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">k</span> <span class="pre">in</span> <span class="pre">dict:</span></code></p>
-<p>loops through the keys. So no need for:</p>
-<p><code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">k</span> <span class="pre">in</span> <span class="pre">dict.keys():</span></code></p>
-</div>
-<div class="section" id="getting-an-arbitrary-key-from-a-dict">
-<h3>Getting an arbitrary key from a dict<a class="headerlink" href="#getting-an-arbitrary-key-from-a-dict" title="Permalink to this headline">¶</a></h3>
-<p>See <code class="docutils literal notranslate"><span class="pre">arbitrary_key.py</span></code> in <cite>examples/lesson05</cite></p>
-</div>
-<div class="section" id="nifty-formatting">
-<h3>nifty formatting<a class="headerlink" href="#nifty-formatting" title="Permalink to this headline">¶</a></h3>
-<p>what the heck is this?</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">data_print</span><span class="p">(</span><span class="n">info</span><span class="p">,</span> <span class="n">widths</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    takes in donor information and widths and returns a string formatted for</span>
-<span class="sd">    printing for a donor report.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">output_string</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-    <span class="n">output_string</span> <span class="o">+=</span> <span class="s1">&#39;{:&lt;</span><span class="si">{width0}</span><span class="s1">} ${:&gt;</span><span class="si">{width1}</span><span class="s1">.2f} {:^</span><span class="si">{width2}</span><span class="s1">} ${:&gt;</span><span class="si">{width3}</span><span class="s1">}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">info</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">info</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">info</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">info</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">width0</span><span class="o">=</span><span class="n">widths</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">width1</span><span class="o">=</span><span class="n">widths</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">width2</span><span class="o">=</span><span class="n">widths</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">width3</span><span class="o">=</span><span class="n">widths</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>cleaned up a bit:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;{:&lt;</span><span class="si">{widths[0]}</span><span class="s1">} ${:&gt;</span><span class="si">{widths[1]}</span><span class="s1">.2f}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span> <span class="s2">&quot;fred&quot;</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">widths</span><span class="o">=</span><span class="n">widths</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="islice">
-<h3>islice<a class="headerlink" href="#islice" title="Permalink to this headline">¶</a></h3>
-<p>This constuct is pertty cool for trigrams:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">w1</span><span class="p">,</span> <span class="n">w2</span><span class="p">,</span> <span class="n">w3</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">word_list</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">],</span> <span class="n">word_list</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">word_list</span><span class="p">[</span><span class="mi">2</span><span class="p">:]):</span>
-</pre></div>
-</div>
-<p>but remeber that slicing makes a copy – so this is making three copies of the full work list. Computers have a LOT of memory these days, but it’s still better to not waste it.</p>
-<p>Turns out there is a alternative:</p>
-<p><a class="reference external" href="https://docs.python.org/3.7/library/itertools.html#itertools.islice">https://docs.python.org/3.7/library/itertools.html#itertools.islice</a></p>
 </div>
 <div class="section" id="coding-workflow">
-<h3>Coding Workflow<a class="headerlink" href="#coding-workflow" title="Permalink to this headline">¶</a></h3>
+<h2>Coding Workflow<a class="headerlink" href="#coding-workflow" title="Permalink to this headline">¶</a></h2>
 <p>As you are developing your code, you <em>really</em> want to have an quick and efficient way to run you code and see if it’s working, how it’s changed, etc.</p>
 <p>You may have noticed that for a program like Mailroom, you may have to do a few steps if user interaction to get to the part of the code you are working on. So how do you work on that efficiently?</p>
-<p>The “right” way to do it is something called “Test Driven Development”, which we will get to soon. But in the meantime:</p>
+<p>The “right” way to do it is something called “Test Driven Development”, which we are doing – but hard for user-interaction!</p>
 <ul class="simple">
 <li><p>You want to break your code down into small functions that each do one thing.</p></li>
 <li><p>You should be able to run each function by itself.</p></li>
 </ul>
 <p>If you are doing that, then as you develop your code, you can write and run each function until it’s doing what it’s supposed to do, and THEN put it all together.</p>
 <p>One way to run a function is to call it in the <code class="docutils literal notranslate"><span class="pre">__name__</span> <span class="pre">==</span> <span class="pre">&quot;__main__&quot;</span></code> block. You can then comment and uncomment each call as you work on your code.</p>
+<p>So, for instance, while developing the interactive menues for mailroom:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="c1"># create a global for the donor data.</span>
+    <span class="n">donor_db</span> <span class="o">=</span> <span class="n">get_donor_db</span><span class="p">()</span>
+    <span class="n">main_menu</span><span class="p">()</span>
+    <span class="c1"># thank_you_menu</span>
+</pre></div>
+</div>
+<p>So I can uncomment our the menu code I’m working on.</p>
 <p>Also: you really, really need a way to run your code with a couple keystrokes!!</p>
-<p>I’ll demonstrate this when we review code.</p>
+</div>
+<div class="section" id="notes-on-testing">
+<h2>Notes on Testing<a class="headerlink" href="#notes-on-testing" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="isolated-tests">
+<h3>Isolated tests<a class="headerlink" href="#isolated-tests" title="Permalink to this headline">¶</a></h3>
+<p>Each test should be isolated – so that it doesn’t rely on any other tests running first, or break any tests that come after it.</p>
+<p>So how do you do that with test data that might change – like a test for adding a new donor?</p>
+<p>If you put some test data in a function:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_test_db</span><span class="p">():</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;william gates iii&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;William Gates III&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mf">653772.32</span><span class="p">,</span> <span class="mf">12.17</span><span class="p">]),</span>
+            <span class="s1">&#39;jeff bezos&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;Jeff Bezos&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mf">877.33</span><span class="p">]),</span>
+            <span class="s1">&#39;paul allen&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;Paul Allen&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mf">663.23</span><span class="p">,</span> <span class="mf">43.87</span><span class="p">,</span> <span class="mf">1.32</span><span class="p">]),</span>
+            <span class="s1">&#39;mark zuckerberg&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;Mark Zuckerberg&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mf">1663.23</span><span class="p">,</span> <span class="mf">4300.87</span><span class="p">,</span> <span class="mf">10432.0</span><span class="p">]),</span>
+            <span class="p">}</span>
+</pre></div>
+</div>
+<p>Then, in each test that needs a donor_db:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test_something</span><span class="p">():</span>
+    <span class="c1"># get a clean one to work with.</span>
+    <span class="n">db</span> <span class="o">=</span> <span class="n">get_test_db</span>
+</pre></div>
+</div>
+<p>This is a simple example of a “fixture”. pytest has features to make more complex fixtures – but this will do for now.</p>
+<p>What if your donor db is global? YOu can reset that, too!</p>
+<p>(Let’s look at my solution)</p>
+</div>
+<div class="section" id="comprehensive-testing">
+<h3>Comprehensive Testing<a class="headerlink" href="#comprehensive-testing" title="Permalink to this headline">¶</a></h3>
+<p>Comprehensive testing is HARD. In fact, it’s impossible.</p>
+<p>We do what we can – but what to do when you find an issue that wasn’t tested for?</p>
+<p>In the supplied tests for trigrams, there was a test for make_sentence(): That’s a tricky one, as it’s supposed to be random. So it tested for some aspects of what the function returned, but very much missed some!</p>
+<p>For example, one of you found:</p>
+<p>“… <code class="docutils literal notranslate"><span class="pre">make_sentence()</span></code> function always returns ‘Blind blind blind blind blind blind.’ with test_dict”</p>
+<p>Oops! that’s clearly wrong. So what to do?</p>
+<p>First – maybe that wasn’t very comprehensive test to begin with – sorry.</p>
+<p>But your tests will nver be comprehensive – you will find bugs after the fact. So the when you do, the first thing to do is write a test that exercises that bug – i.e. one that does fail with your broken code.</p>
+</div>
+</div>
+<div class="section" id="minor-issues-that-came-up-during-the-week">
+<h2>Minor issues that came up during the week.<a class="headerlink" href="#minor-issues-that-came-up-during-the-week" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="what-does-in-a-dict-mean">
+<h3>What does “in a dict” mean?<a class="headerlink" href="#what-does-in-a-dict-mean" title="Permalink to this headline">¶</a></h3>
+<p>Remember that:</p>
+<p><code class="docutils literal notranslate"><span class="pre">something</span> <span class="pre">in</span> <span class="pre">a_dict</span></code> checks if <code class="docutils literal notranslate"><span class="pre">something</span></code> is a key</p>
+<p>So no need for:</p>
+<p><code class="docutils literal notranslate"><span class="pre">something</span> <span class="pre">in</span> <span class="pre">dict.keys()</span></code></p>
 </div>
 <div class="section" id="looping-through-a-dict">
-<h3>looping through a dict<a class="headerlink" href="#looping-through-a-dict" title="Permalink to this headline">¶</a></h3>
+<h3>Looping through a dict<a class="headerlink" href="#looping-through-a-dict" title="Permalink to this headline">¶</a></h3>
 <p>If you need just the keys:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">a_dict</span><span class="p">:</span>
    <span class="o">...</span>
@@ -258,14 +297,47 @@
 </pre></div>
 </div>
 </div>
+<div class="section" id="getting-an-arbitrary-key-from-a-dict">
+<h3>Getting an arbitrary key from a dict<a class="headerlink" href="#getting-an-arbitrary-key-from-a-dict" title="Permalink to this headline">¶</a></h3>
+<p>See <code class="docutils literal notranslate"><span class="pre">arbitrary_key.py</span></code> in <cite>examples/lesson06</cite></p>
+<p>Let’s take a look …</p>
+</div>
+<div class="section" id="islice">
+<h3>islice<a class="headerlink" href="#islice" title="Permalink to this headline">¶</a></h3>
+<p>This constuct is pretty cool for trigrams:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">w1</span><span class="p">,</span> <span class="n">w2</span><span class="p">,</span> <span class="n">w3</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">word_list</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">],</span> <span class="n">word_list</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">word_list</span><span class="p">[</span><span class="mi">2</span><span class="p">:]):</span>
+</pre></div>
+</div>
+<p>But remember that slicing makes a copy – so this is making three copies of the full word list. Computers have a LOT of memory these days, but it’s still better to not waste it.</p>
+<p>Turns out there is a alternative:</p>
+<p><a class="reference external" href="https://docs.python.org/3.7/library/itertools.html#itertools.islice">https://docs.python.org/3.7/library/itertools.html#itertools.islice</a></p>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>Lightning Talks<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Let’s take a break and then hear some lightning talks:</p>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">Rose Nyameke</div>
+<div class="line"><br /></div>
+<div class="line">Hua Shao</div>
+<div class="line"><br /></div>
+<div class="line">Vikram Raghavan</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="mailroom-issues">
+<h2>Mailroom issues:<a class="headerlink" href="#mailroom-issues" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="dict-as-switch-how-do-you-leave-the-loop">
 <h3>dict as switch – how do you leave the loop?<a class="headerlink" href="#dict-as-switch-how-do-you-leave-the-loop" title="Permalink to this headline">¶</a></h3>
 <p>Let’s look at a particularly nifty solution:</p>
-<p><code class="docutils literal notranslate"><span class="pre">solutions/Lesson05/mailroom_dict_as_switch</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">solutions/Lesson05/mailroom</span></code></p>
 </div>
-<div class="section" id="quit">
-<h3>quit()<a class="headerlink" href="#quit" title="Permalink to this headline">¶</a></h3>
-<p>In my solution to mailroom, I created a function called <code class="docutils literal notranslate"><span class="pre">quit</span></code> to quit the program. That is not a great idea, as there is a built-in called <code class="docutils literal notranslate"><span class="pre">quit</span></code>.  In my defense, the <code class="docutils literal notranslate"><span class="pre">quit()</span></code> built-in didn’t exist when I learned Python :-).</p>
+<div class="section" id="what-does-global-mean">
+<h3>what does “global” mean?<a class="headerlink" href="#what-does-global-mean" title="Permalink to this headline">¶</a></h3>
+<p>There is a “global” namespace, and there is the <code class="docutils literal notranslate"><span class="pre">global</span></code> keyword. What is the difference? when do you need to use <code class="docutils literal notranslate"><span class="pre">global</span></code>?</p>
+<p>TL;DR : There is nothing wrong with using global names – but you VERY RARELY should use the <code class="docutils literal notranslate"><span class="pre">global</span></code> keyword!</p>
+<p>(Devin’s example)</p>
 </div>
 <div class="section" id="readlines">
 <h3><code class="docutils literal notranslate"><span class="pre">readlines()</span></code> ?<a class="headerlink" href="#readlines" title="Permalink to this headline">¶</a></h3>
@@ -290,7 +362,7 @@
 </div>
 <div class="section" id="binary-vs-text-files">
 <h3>Binary vs text files<a class="headerlink" href="#binary-vs-text-files" title="Permalink to this headline">¶</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">open()</span></code> uses text mode (deafult encoding – utf-8?) by default. It will try to decode the file into text. If you open a binary file that way it will likely barf.</p>
+<p><code class="docutils literal notranslate"><span class="pre">open()</span></code> uses text mode (default encoding – utf-8?) by default. It will try to decode the file into text. If you open a binary file that way it will likely barf.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">open</span><span class="p">(</span><span class="n">the_filename</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span>
 </pre></div>
 </div>
@@ -306,11 +378,20 @@
 </div>
 <div class="section" id="break-and-lightning-talks">
 <h2>Break and Lightning talks<a class="headerlink" href="#break-and-lightning-talks" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="testing">
-<h3>Testing?<a class="headerlink" href="#testing" title="Permalink to this headline">¶</a></h3>
-<p>Did y’all do the testing exercise with a coding bat example?</p>
-<p>We could do one now.</p>
-<p>Or…</p>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">Farhan Samani</div>
+<div class="line"><br /></div>
+<div class="line">Katrina Seok Taylor</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="new-material">
+<h2>New material:<a class="headerlink" href="#new-material" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="comprehensions">
+<h3>Comprehensions<a class="headerlink" href="#comprehensions" title="Permalink to this headline">¶</a></h3>
+<p>Let’s take a few minutes to go through it in class:</p>
+<p><a class="reference external" href="https://uwpce-pythoncert.github.io/ProgrammingInPython/exercises/comprehensions_lab.html">https://uwpce-pythoncert.github.io/ProgrammingInPython/exercises/comprehensions_lab.html</a></p>
 </div>
 <div class="section" id="advanced-argument-passing">
 <h3>Advanced Argument Passing<a class="headerlink" href="#advanced-argument-passing" title="Permalink to this headline">¶</a></h3>
@@ -318,7 +399,12 @@
 <p>Let’s explore it a bit.</p>
 <p>AND – we’ll use TDD to do it.</p>
 <p>Exercise in the class notes here:</p>
-<p><a class="reference external" href="https://uwpce-pythoncert.github.io/ProgrammingInPython/exercises/args_kwargs_lab.html#exercise-args-kwargs-lab" title="(in Programming in Python)"><span>args and kwargs Lab</span></a></p>
+<p><a class="reference external" href="https://uwpce-pythoncert.github.io/ProgrammingInPython/exercises/args_kwargs_lab.html">https://uwpce-pythoncert.github.io/ProgrammingInPython/exercises/args_kwargs_lab.html</a></p>
+</div>
+<div class="section" id="modules-and-packages">
+<h3>Modules and Packages<a class="headerlink" href="#modules-and-packages" title="Permalink to this headline">¶</a></h3>
+<p>Shall we take a look?</p>
+<p><a class="reference external" href="https://uwpce-pythoncert.github.io/ProgrammingInPython/exercises/packaging/package_lab.html">https://uwpce-pythoncert.github.io/ProgrammingInPython/exercises/packaging/package_lab.html</a></p>
 </div>
 </div>
 </div>
@@ -328,6 +414,15 @@
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="lightning_talks.html" class="btn btn-neutral float-right" title="Lightning Talks: Fall 2020 Class" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="lesson05.html" class="btn btn-neutral float-left" title="11/19/2020: testing, testing, 1, 2, 3" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
