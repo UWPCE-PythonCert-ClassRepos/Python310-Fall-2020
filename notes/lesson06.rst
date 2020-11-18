@@ -13,9 +13,9 @@ A collection of notes to go over in class, to keep things organized.
 Lightning Talks
 ===============
 
-From last week:
 
-
+| Rose Nyameke
+|
 | Hua Shao
 |
 | Vikram Raghavan
@@ -24,7 +24,39 @@ From last week:
 |
 | Katrina Seok Taylor
 |
-| Rose Nyameke
+
+
+Coding Workflow
+===============
+
+As you are developing your code, you *really* want to have an quick and efficient way to run you code and see if it's working, how it's changed, etc.
+
+You may have noticed that for a program like Mailroom, you may have to do a few steps if user interaction to get to the part of the code you are working on. So how do you work on that efficiently?
+
+The "right" way to do it is something called "Test Driven Development", which we are doing -- but hard for user-interaction!
+
+* You want to break your code down into small functions that each do one thing.
+
+* You should be able to run each function by itself.
+
+If you are doing that, then as you develop your code, you can write and run each function until it's doing what it's supposed to do, and THEN put it all together.
+
+One way to run a function is to call it in the ``__name__ == "__main__"`` block. You can then comment and uncomment each call as you work on your code.
+
+So, for instance, while developing the interactive menues for mailroom:
+
+.. code-block:: python
+
+    if __name__ == "__main__":
+        # create a global for the donor data.
+        donor_db = get_donor_db()
+        main_menu()
+        # thank_you_menu
+
+So I can uncomment our the menu code I'm working on.
+
+Also: you really, really need a way to run your code with a couple keystrokes!!
+
 
 Notes on Testing
 ================
@@ -57,12 +89,16 @@ Then, in each test that needs a donor_db:
 
 This is a simple example of a "fixture". pytest has features to make more complex fixtures -- but this will do for now.
 
+What if your donor db is global? YOu can reset that, too!
+
+(Let's look at my solution)
+
 Comprehensive Testing
 ---------------------
 
 Comprehensive testing is HARD. In fact, it's impossible.
 
-We do what we can -- but what to do when you find a hole?
+We do what we can -- but what to do when you find an issue that wasn't tested for?
 
 In the supplied tests for trigrams, there was a test for make_sentence(): That's a tricky one, as it's supposed to be random. So it tested for some aspects of what the function returned, but very much missed some!
 
@@ -74,97 +110,26 @@ Oops! that's clearly wrong. So what to do?
 
 First -- maybe that wasn't very comprehensive test to begin with -- sorry.
 
-But your tests will nver be comprehensive -- you will find bugs after teh fact. So the when you do, the first thing to do is write a test that exercises that bug -- i.e. one that does fail with your broken code.
+But your tests will nver be comprehensive -- you will find bugs after the fact. So the when you do, the first thing to do is write a test that exercises that bug -- i.e. one that does fail with your broken code.
 
 
+Minor issues that came up during the week.
+==========================================
 
 
-
-
-Issues that came up during the week.
-====================================
-
-Minor Issues
-------------
+What does "in a dict" mean?
+---------------------------
 
 Remember that:
 
 ``something in a_dict`` checks if ``something`` is a key
 
-similarly:
+So no need for:
 
-``for k in dict:``
-
-loops through the keys. So no need for:
-
-``for k in dict.keys():``
+``something in dict.keys()``
 
 
-
-Getting an arbitrary key from a dict
-------------------------------------
-
-See ``arbitrary_key.py`` in `examples/lesson06`
-
-
-nifty formatting
-----------------
-
-what the heck is this?
-
-.. code-block:: python
-
-    def data_print(info, widths):
-        """
-        takes in donor information and widths and returns a string formatted for
-        printing for a donor report.
-        """
-        output_string = ""
-        output_string += '{:<{width0}} ${:>{width1}.2f} {:^{width2}} ${:>{width3}}'.format(info[0], info[1], info[2], info[3], width0=widths[0], width1=widths[1]-1, width2=widths[2], width3=widths[3]-1)
-
-cleaned up a bit::
-
-    '{:<{widths[0]}} ${:>{widths[1]}.2f}'.format( "fred", 100, widths=widths)
-
-islice
-------
-
-This constuct is pretty cool for trigrams::
-
-  for w1, w2, w3 in zip(word_list[:-2], word_list[1:-1], word_list[2:]):
-
-But remember that slicing makes a copy -- so this is making three copies of the full word list. Computers have a LOT of memory these days, but it's still better to not waste it.
-
-Turns out there is a alternative:
-
-https://docs.python.org/3.7/library/itertools.html#itertools.islice
-
-
-Coding Workflow
----------------
-
-As you are developing your code, you *really* want to have an quick and efficient way to run you code and see if it's working, how it's changed, etc.
-
-You may have noticed that for a program like Mailroom, you may have to do a few steps if user interaction to get to the part of the code you are working on. So how do you work on that efficiently?
-
-The "right" way to do it is something called "Test Driven Development", which we will get to soon. But in the meantime:
-
-* You want to break your code down into small functions that each do one thing.
-
-* You should be able to run each function by itself.
-
-If you are doing that, then as you develop your code, you can write and run each function until it's doing what it's supposed to do, and THEN put it all together.
-
-One way to run a function is to call it in the ``__name__ == "__main__"`` block. You can then comment and uncomment each call as you work on your code.
-
-Also: you really, really need a way to run your code with a couple keystrokes!!
-
-I'll demonstrate this when we review code.
-
-
-
-
-looping through a dict
+Looping through a dict
 ----------------------
 
 If you need just the keys::
@@ -183,18 +148,52 @@ If you need both::
        ...
 
 
+Getting an arbitrary key from a dict
+------------------------------------
+
+See ``arbitrary_key.py`` in `examples/lesson06`
+
+Let's take a look ...
+
+
+
+islice
+------
+
+This constuct is pretty cool for trigrams::
+
+  for w1, w2, w3 in zip(word_list[:-2], word_list[1:-1], word_list[2:]):
+
+But remember that slicing makes a copy -- so this is making three copies of the full word list. Computers have a LOT of memory these days, but it's still better to not waste it.
+
+Turns out there is a alternative:
+
+https://docs.python.org/3.7/library/itertools.html#itertools.islice
+
+Lightning Talks
+===============
+
+Let's take a break and then hear some lightning talks:
+
+|
+| Rose Nyameke
+|
+| Hua Shao
+|
+| Vikram Raghavan
+|
+
+
+Mailroom issues:
+================
+
 dict as switch -- how do you leave the loop?
 --------------------------------------------
 
 Let's look at a particularly nifty solution:
 
-``solutions/Lesson05/mailroom_dict_as_switch``
+``solutions/Lesson05/mailroom``
 
-
-quit()
-------
-
-In my solution to mailroom, I created a function called ``quit`` to quit the program. That is not a great idea, as there is a built-in called ``quit``.  In my defense, the ``quit()`` built-in didn't exist when I learned Python :-).
 
 what does "global" mean?
 ------------------------
@@ -239,7 +238,7 @@ And one less line of code ...
 Binary vs text files
 --------------------
 
-``open()`` uses text mode (deafult encoding -- utf-8?) by default. It will try to decode the file into text. If you open a binary file that way it will likely barf.
+``open()`` uses text mode (default encoding -- utf-8?) by default. It will try to decode the file into text. If you open a binary file that way it will likely barf.
 
 ::
 
@@ -265,6 +264,12 @@ review mailroom?
 Break and Lightning talks
 =========================
 
+|
+| Farhan Samani
+|
+| Katrina Seok Taylor
+|
+
 New material:
 =============
 
@@ -289,6 +294,13 @@ Exercise in the class notes here:
 
 https://uwpce-pythoncert.github.io/ProgrammingInPython/exercises/args_kwargs_lab.html
 
+
+Modules and Packages
+--------------------
+
+Shall we take a look?
+
+https://uwpce-pythoncert.github.io/ProgrammingInPython/exercises/packaging/package_lab.html
 
 
 
