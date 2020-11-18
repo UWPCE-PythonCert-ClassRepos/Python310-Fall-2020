@@ -346,5 +346,6 @@ if __name__ == "__main__":
     # create a global for the donor data.
     donor_db = get_donor_db()
     main_menu()
+    # thank_you_menu
 
 

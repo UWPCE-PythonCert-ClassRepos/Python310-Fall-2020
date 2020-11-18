@@ -24,17 +24,18 @@ def test_normalize_name():
 
 
 def test_list_donors():
-    mr.donor_db = mr.get_donor_db()
+    donor_db = mr.get_donor_db()
 
     listing = mr.list_donors()
 
     # hard to test this throughly -- better not to hard code the entire
     # thing. But check for a few aspects -- this will catch the likely
     # errors
-    assert listing.startswith("Donor list:\n")
+    print(repr(listing))
+    assert listing.startswith("\nDonor list:")
     assert "Jeff Bezos" in listing
     assert "William Gates III" in listing
-    assert len(listing.split('\n')) == 5
+    assert len(listing.split('\n')) == 6
 
 
 def test_find_donor():
