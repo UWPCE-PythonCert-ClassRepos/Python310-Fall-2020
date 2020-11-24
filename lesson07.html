@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Notes for lesson 07 &mdash; IntroToPython: Fall 2020 1.0 documentation</title>
+  <title>11/24/2020: import this &mdash; IntroToPython: Fall 2020 1.0 documentation</title>
   
 
   
@@ -35,7 +35,9 @@
 
     
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Lightning Talks: Fall 2020 Class" href="lightning_talks.html" />
+    <link rel="prev" title="11/17/2020: Odd sentences …" href="lesson06.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -84,9 +86,52 @@
               
             
             
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="lesson01.html">10/13/2020: Introduction to Py310: Programming in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lesson02.html">10/20/2020: And now on to actual coding!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson03.html">10/27/2020: Real code!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson04.html">11/02/2020: A actual Program!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson05.html">11/19/2020: testing, testing, 1, 2, 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson06.html">11/17/2020: Odd sentences …</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">11/24/2020: import this</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#lightning-talks">Lightning Talks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#scheduling">Scheduling:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#issues-that-came-up-during-the-week">Issues that came up during the week.</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#naming-things">Naming Things</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#style">Style</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#auto-fixing-style">Auto-fixing style</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#autopep8">AutoPEP8</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#yapf">YAPF</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#black">Black</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#chaining-or-etc">Chaining <code class="docutils literal notranslate"><span class="pre">or</span></code>, etc.</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#operator-precedence">Operator Precedence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#comparison-chaining">Comparison Chaining</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#mutating-vs-re-assigning">Mutating vs. re-assigning</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#mutating-vs-assigning">mutating vs assigning</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#what-to-return">What to return?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#break-then-lightning-talks">Break – Then Lightning Talks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#packaging">Packaging</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#relative-importing">relative importing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#where-does-python-look-for-modules-and-packages">Where does Python look for modules and packages?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#what-about-scripts">what about scripts??</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#args-and-kwargs">args and kwargs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Break – Then Lightning Talks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#any-other-questions-issues-before-we-get-into-classes">Any other questions/issues before we get into classes?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#classes">Classes!</a></li>
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="lightning_talks.html">Lightning Talks: Fall 2020 Class</a></li>
@@ -136,7 +181,7 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Notes for lesson 07</li>
+      <li>11/24/2020: import this</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -155,47 +200,83 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="notes-for-lesson-07">
-<span id="notes-lesson07"></span><h1>Notes for lesson 07<a class="headerlink" href="#notes-for-lesson-07" title="Permalink to this headline">¶</a></h1>
-<p>11/20/2018</p>
+  <div class="section" id="import-this">
+<span id="notes-lesson07"></span><h1>11/24/2020: import this<a class="headerlink" href="#import-this" title="Permalink to this headline">¶</a></h1>
 <p>A collection of notes to go over in class, to keep things organized.</p>
 <div class="section" id="lightning-talks">
 <h2>Lightning Talks<a class="headerlink" href="#lightning-talks" title="Permalink to this headline">¶</a></h2>
-<p>Sopheaktr L Danh</p>
-<p>Bishal Gupta</p>
-<p>Maria G Berschauer</p>
-<p>Nathan Marc Debard</p>
+<p>We’ve gotten a bit behind – so lots of lightning talks today!</p>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">Micha Park</div>
+<div class="line"><br /></div>
+<div class="line">Sopheaktr L Danh</div>
+<div class="line"><br /></div>
+<div class="line">Hua Shao</div>
+<div class="line"><br /></div>
+<div class="line">Vikram Raghavan</div>
+<div class="line"><br /></div>
+<div class="line">Farhan Samani</div>
+<div class="line"><br /></div>
+<div class="line">Katrina Seok Taylor</div>
+<div class="line"><br /></div>
+<div class="line">Bishal Gupta</div>
+<div class="line"><br /></div>
+<div class="line">Maria G Berschauer</div>
+<div class="line"><br /></div>
+<div class="line">Nathan Marc Debard</div>
+<div class="line"><br /></div>
+</div>
 </div>
 <div class="section" id="scheduling">
 <h2>Scheduling:<a class="headerlink" href="#scheduling" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="turkey-day-weekend">
-<h3>Turkey Day weekend<a class="headerlink" href="#turkey-day-weekend" title="Permalink to this headline">¶</a></h3>
-<p>I’m around all weekend, so can do office hours – do you want them?</p>
-<p>The usual times?</p>
-</div>
-<div class="section" id="next-week">
-<h3>Next Week:<a class="headerlink" href="#next-week" title="Permalink to this headline">¶</a></h3>
-</div>
+<p>This is Thanksgiving week – Are Sunday office hours still good?</p>
+<p>If I held additional office hours, would you come?</p>
 </div>
 <div class="section" id="issues-that-came-up-during-the-week">
 <h2>Issues that came up during the week.<a class="headerlink" href="#issues-that-came-up-during-the-week" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="naming-and-style">
-<h3>Naming and Style<a class="headerlink" href="#naming-and-style" title="Permalink to this headline">¶</a></h3>
-<p>Read this again:</p>
-<p><a class="reference external" href="https://uwpce-pythoncert.github.io/PythonCertDevel/modules/NamingThings.html">https://uwpce-pythoncert.github.io/PythonCertDevel/modules/NamingThings.html</a></p>
-<p>And watch this video:</p>
-<p><a class="reference external" href="https://www.youtube.com/watch?v=hZ7hgYKKnF0">https://www.youtube.com/watch?v=hZ7hgYKKnF0</a></p>
+<div class="section" id="naming-things">
+<h3>Naming Things<a class="headerlink" href="#naming-things" title="Permalink to this headline">¶</a></h3>
+<p>There’s an adage in programming:</p>
+<p class="centered">
+<strong><strong>Naming Things is Hard</strong></strong></p><p>It really is. But it’s also important. Good names for variables make the code a lot easier to read and understand.</p>
+<p>This may seem like a non-issue when you are working on a small project. When you are in the middle of it, you know exactly what you mean when you are working with a variable called “i” or “item” or “key”. But when you go read the code a week, month, year later – and when that variable is defined somewhere off the page, you really will get confused.</p>
+<p>And even worse are names that are just plain “wrong” (probably due to refactoring) a function called <cite>print_something</cite> that doesn’t print anything, a variable called <cite>donor</cite> that is really a list of past donations, you get the idea.</p>
+<p>Believe me, when I read your code, I really do get confused when variables don’t mean what their name suggests they mean. And you will et confused as well, when you re-read the code later one – maybe even only a week later.</p>
+<p>Also, in a larger project, you are stuck with the names you choose up front – at least with ones for functions and classes that will be used elsewhere. So it’s really worth putting some thought into it right up front.</p>
+</div>
+<div class="section" id="style">
+<h3>Style<a class="headerlink" href="#style" title="Permalink to this headline">¶</a></h3>
 <p>Some of you are still not following PEP 8 style. If you can’t (or don’t want to) set up a linter in your editor or IDE, you can run <code class="docutils literal notranslate"><span class="pre">pycodestyle</span></code> on your code.</p>
 <p><a class="reference external" href="https://pycodestyle.readthedocs.io">https://pycodestyle.readthedocs.io</a></p>
 <p><code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">pycodestyle</span></code></p>
 <p>Let’s give it a quick try.</p>
-</div>
 <div class="section" id="auto-fixing-style">
-<h3>Auto-fixing style<a class="headerlink" href="#auto-fixing-style" title="Permalink to this headline">¶</a></h3>
+<h4>Auto-fixing style<a class="headerlink" href="#auto-fixing-style" title="Permalink to this headline">¶</a></h4>
 <p>If you don’t want to fix all that by hand, there are tools to do it for you.</p>
-<p>one really nice one is yapf:</p>
+<p>Some options are:</p>
+</div>
+<div class="section" id="autopep8">
+<h4>AutoPEP8<a class="headerlink" href="#autopep8" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="https://pypi.org/project/autopep8/">https://pypi.org/project/autopep8/</a></p>
+</div>
+<div class="section" id="yapf">
+<h4>YAPF<a class="headerlink" href="#yapf" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://github.com/google/yapf">https://github.com/google/yapf</a></p>
-<p>Maybe give <code class="docutils literal notranslate"><span class="pre">yapf</span></code> a try.</p>
+</div>
+<div class="section" id="black">
+<h4>Black<a class="headerlink" href="#black" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="https://black.readthedocs.io/en/stable/">https://black.readthedocs.io/en/stable/</a></p>
+<p>These are in order of how “opinionated” or “intrusive” they are. AutoPEP8 only fixes actual PEP8 violations. YAPF is fairly configurable as to what it does, and exactly how. Black only does one thing: make all the code in the Black style.</p>
+<blockquote>
+<div><p>“You can have your code in any style you want – as long as it’s Black”</p>
+</div></blockquote>
+<p>Adapted from the famous quote by Henry Ford about the model T:</p>
+<blockquote>
+<div><p><a class="reference external" href="https://en.wikiquote.org/wiki/Henry_Ford">“Any customer can have a car painted any color that he wants so long as it is black”</a></p>
+</div></blockquote>
+<p>Maybe give one of them a try. You can also likely plug one or the other into your editor.</p>
+</div>
 </div>
 <div class="section" id="chaining-or-etc">
 <h3>Chaining <code class="docutils literal notranslate"><span class="pre">or</span></code>, etc.<a class="headerlink" href="#chaining-or-etc" title="Permalink to this headline">¶</a></h3>
@@ -223,7 +304,7 @@
 </pre></div>
 </div>
 <p>That’s nice, ‘cause it looks a lot like math – simple and clear.</p>
-<p>and that means:</p>
+<p>and it means:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">b</span> <span class="o">&lt;</span> <span class="n">c</span><span class="p">):</span>
     <span class="n">do_something</span><span class="p">()</span>
 </pre></div>
@@ -241,7 +322,7 @@
 <span class="gh">Out[43]: </span><span class="go">False</span>
 </pre></div>
 </div>
-<p>Turns out that <code class="docutils literal notranslate"><span class="pre">in</span></code>, <code class="docutils literal notranslate"><span class="pre">not</span></code>, <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code> are considered comparison operators too.</p>
+<p>Turns out that <code class="docutils literal notranslate"><span class="pre">in</span></code>, <code class="docutils literal notranslate"><span class="pre">not</span></code>, <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code> are considered comparison operators too (at least in this context)</p>
 </div>
 </div>
 <div class="section" id="mutating-vs-re-assigning">
@@ -265,7 +346,9 @@
 <li><p>Throw away the original list <code class="docutils literal notranslate"><span class="pre">output</span></code> was bound to, and the temporary list created for <code class="docutils literal notranslate"><span class="pre">follower</span></code>.</p></li>
 </ol>
 <p>That’s a LOT of overhead!</p>
-<p>Be cognizant of when you are mutating (changing) an object vs. creating a new one and assigning it to the same name. When you do assignment (<code class="docutils literal notranslate"><span class="pre">=</span></code>) you are probably creating a new object – is that what you want?</p>
+<div class="section" id="mutating-vs-assigning">
+<h4>mutating vs assigning<a class="headerlink" href="#mutating-vs-assigning" title="Permalink to this headline">¶</a></h4>
+<p>Be cognizant of when you are mutating (changing) an object vs. creating a new one and assigning it to the same name. When you do assignment (<code class="docutils literal notranslate"><span class="pre">=</span></code>) you are probably creating a new object – is that what you want? And if you are NOT using <code class="docutils literal notranslate"><span class="pre">=</span></code>, then you are probably mutating an existing object.</p>
 <p><code class="docutils literal notranslate"><span class="pre">+=</span></code> is different – it is the “in_place” operator, so:</p>
 <p><code class="docutils literal notranslate"><span class="pre">a_list</span> <span class="pre">+=</span> <span class="pre">another_list</span></code></p>
 <p>does not create an new list – it adds to the original list “in place” – it is identical to:</p>
@@ -314,48 +397,132 @@
 <p>And no one wanted to add <strong>two</strong> new sets of operators.</p>
 <p><a class="reference external" href="https://www.python.org/dev/peps/pep-0203/">https://www.python.org/dev/peps/pep-0203/</a></p>
 </div>
-<div class="section" id="working-with-dicts">
-<h3>Working with dicts<a class="headerlink" href="#working-with-dicts" title="Permalink to this headline">¶</a></h3>
-<p>Want to know if something is in a dict? You could do:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">donors</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+</div>
+<div class="section" id="what-to-return">
+<h3>What to return?<a class="headerlink" href="#what-to-return" title="Permalink to this headline">¶</a></h3>
+<p>It is a convention in Python to return a new object if one is created (kind of necessary, actually), but to return <code class="docutils literal notranslate"><span class="pre">None</span></code> if a new object is NOT created – i.e. the existing object is mutated. Contrast strings and lists:</p>
+<p>Strings are immutable, so they can’t be changed in place:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [11]: </span><span class="n">a_string</span> <span class="o">=</span> <span class="s2">&quot;this is a string&quot;</span>
+
+<span class="gp">In [12]: </span><span class="n">new_string</span> <span class="o">=</span> <span class="n">a_string</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
+
+<span class="gp">In [13]: </span><span class="nb">print</span><span class="p">(</span><span class="n">new_string</span><span class="p">)</span>
+<span class="go">This is a string</span>
+
+<span class="gp">In [14]: </span><span class="nb">print</span><span class="p">(</span><span class="n">a_string</span><span class="p">)</span>
+<span class="go">this is a string</span>
 </pre></div>
 </div>
-<p>But that’s creating a dict_keys object unnecessarily.</p>
-<p>You can simply do:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">donors</span><span class="p">:</span>
+<p>Whereas lists are mutable, and they CAN be changed in place:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [15]: </span><span class="n">a_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+
+<span class="gp">In [16]: </span><span class="n">new_list</span> <span class="o">=</span> <span class="n">a_list</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+
+<span class="gp">In [17]: </span><span class="nb">print</span><span class="p">(</span><span class="n">new_list</span><span class="p">)</span>
+<span class="go">None</span>
+
+<span class="gp">In [18]: </span><span class="nb">print</span><span class="p">(</span><span class="n">a_list</span><span class="p">)</span>
+<span class="go">[1, 2, 3, 4, 4, 8, 9]</span>
 </pre></div>
 </div>
-<p>Cleaner – but is it faster? It’ll be a lot faster if the <code class="docutils literal notranslate"><span class="pre">dict_keys</span></code> object doesn’t directly support <code class="docutils literal notranslate"><span class="pre">in</span></code>.  Let’s take a look:</p>
+<p>note that the mutating method, <code class="docutils literal notranslate"><span class="pre">.sort()</span></code> returns <code class="docutils literal notranslate"><span class="pre">None</span></code>. This makes it a bit annoying sometimes, as you can’t chain operations, but it also makes it less confusing.</p>
+<p>This is a standard practice in the Python standard library, but you really should follow it in your own code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_donor</span><span class="p">(</span><span class="n">new_donor</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    add a new donor to the global donor database</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="o">...</span>
+    <span class="k">return</span> <span class="kc">None</span>
+</pre></div>
 </div>
-<div class="section" id="unit-tests-should-be-isolated">
-<h3>unit tests should be isolated<a class="headerlink" href="#unit-tests-should-be-isolated" title="Permalink to this headline">¶</a></h3>
-<p>Ideally, each unit test should be able to run all on its own, and it should NOT matter what order tests run in.</p>
-<p>That can be a bit of a trick with mailroom – as you might have a test of adding a new donor to the database, and another test that asserts that the report has the right number of donors in it.</p>
-<p>Let’s look a how to deal with that.</p>
+<p>This REALLY should not return the global donor database.</p>
+<p>Similarly, if a function takes a mutable on input, and changes it in place, it should not return the passed-in object:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_donation</span><span class="p">(</span><span class="n">donor</span><span class="p">,</span> <span class="n">donation</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    add a new donation to a donor</span>
+
+<span class="sd">    :param donor: the donor object to add the donation to</span>
+
+<span class="sd">    :param donation: the donation to add</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">donor</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">donation</span><span class="p">)</span>
+
+    <span class="c1"># don&#39;t do this!!!!</span>
+    <span class="k">return</span> <span class="n">donor</span>
+</pre></div>
 </div>
-<div class="section" id="a-little-code-refactoring">
-<h3>A Little Code Refactoring<a class="headerlink" href="#a-little-code-refactoring" title="Permalink to this headline">¶</a></h3>
-<p>(If we have time…)</p>
-<p>After making a few comments on a block of mailroom code, I decided it might be instructive to review and refactor it live with the class. The code can be found in the class repo in:</p>
-<p><code class="docutils literal notranslate"><span class="pre">/examples/lesson07/refactor.py</span></code></p>
-<p>That code works now – so the first thing we’re going to do is make tests for it. Then we can refactor away and know it still works.</p>
-</div>
-<div class="section" id="any-other-questions-issues-before-we-get-into-classes">
-<h3>Any other questions/issues before we get into classes?<a class="headerlink" href="#any-other-questions-issues-before-we-get-into-classes" title="Permalink to this headline">¶</a></h3>
-<p>Note that we’ll be employing testing the rest of the class, so if you don’t quite “get it”,  you’ll have more chances :-)</p>
+<p>This should return <code class="docutils literal notranslate"><span class="pre">None</span></code> to indicate that the passed-in donor object was changed in place.</p>
 </div>
 </div>
 <div class="section" id="break-then-lightning-talks">
 <h2>Break – Then Lightning Talks<a class="headerlink" href="#break-then-lightning-talks" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">Micha Park</div>
+<div class="line"><br /></div>
+<div class="line">Sopheaktr L Danh</div>
+<div class="line"><br /></div>
+<div class="line">Hua Shao</div>
+<div class="line"><br /></div>
+<div class="line">Vikram Raghavan</div>
+<div class="line"><br /></div>
+<div class="line">Farhan Samani</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="packaging">
+<h2>Packaging<a class="headerlink" href="#packaging" title="Permalink to this headline">¶</a></h2>
+<p>Are you all thoroughly confused now?</p>
+<p>There are a number of subtleties here:</p>
+<div class="section" id="relative-importing">
+<h3>relative importing<a class="headerlink" href="#relative-importing" title="Permalink to this headline">¶</a></h3>
+<p>what the heck does:</p>
+<p><code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">.mailroom</span> <span class="pre">import</span> <span class="pre">model</span> <span class="pre">as</span> <span class="pre">m</span></code></p>
+<p>mean?</p>
+<p>What about:</p>
+<p><code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">..mailroom.cli</span> <span class="pre">import</span> <span class="pre">main</span></code> ?</p>
+</div>
+<div class="section" id="where-does-python-look-for-modules-and-packages">
+<h3>Where does Python look for modules and packages?<a class="headerlink" href="#where-does-python-look-for-modules-and-packages" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">sys.path</span></code>: let’s take a look.</p>
+<p>Note that the current working directory is put on sys,path by default – what are the implications of that?</p>
+</div>
+<div class="section" id="what-about-scripts">
+<h3>what about scripts??<a class="headerlink" href="#what-about-scripts" title="Permalink to this headline">¶</a></h3>
+<p>It turns out that the “old” <code class="docutils literal notranslate"><span class="pre">scripts</span></code> keyword to <code class="docutils literal notranslate"><span class="pre">setup()</span></code> is not totally reliable (particularly on Windows). And it can cause some complications. I always liked the simplicity of scripts, but it really is a better idea to use setuptools’ console_scripts entry point.</p>
+<p>But the errors we saw are instructive – so let’s take a look. In particular, what happens when you have a script with the same name as your package?</p>
+<p>Let’s take a look at my packaged up mailroom to see how that works.</p>
+</div>
+</div>
+<div class="section" id="args-and-kwargs">
+<h2>args and kwargs<a class="headerlink" href="#args-and-kwargs" title="Permalink to this headline">¶</a></h2>
+<p>Python’s very flexible parameter specification and argument passing is really powerful, but it can be confusing:</p>
+<p>Any particular confusions?</p>
+<p>What to look at my <code class="docutils literal notranslate"><span class="pre">*args,</span> <span class="pre">**kwargs</span></code> Lab?</p>
+</div>
+<div class="section" id="id1">
+<h2>Break – Then Lightning Talks<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">Katrina Seok Taylor</div>
+<div class="line"><br /></div>
+<div class="line">Bishal Gupta</div>
+<div class="line"><br /></div>
+<div class="line">Maria G Berschauer</div>
+<div class="line"><br /></div>
+<div class="line">Nathan Marc Debard</div>
+<div class="line"><br /></div>
+</div>
+<div class="section" id="any-other-questions-issues-before-we-get-into-classes">
+<h3>Any other questions/issues before we get into classes?<a class="headerlink" href="#any-other-questions-issues-before-we-get-into-classes" title="Permalink to this headline">¶</a></h3>
+<p>Note that we’ll be employing packaging and testing the rest of the class, so if you don’t quite “get it”,  you’ll have more chances :-)</p>
+</div>
 </div>
 <div class="section" id="classes">
 <h2>Classes!<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
 <p>Classes are the core of Object Oriented programming. Rather than talk about them in the abstract, we’ll start doing a real problem, and talk about the pieces as we go.</p>
-<div class="section" id="html-render">
-<h3>html_render<a class="headerlink" href="#html-render" title="Permalink to this headline">¶</a></h3>
-<p>So on to the the html_render assignment:</p>
-<p><a class="reference external" href="https://uwpce-pythoncert.github.io/ProgrammingInPython/exercises/html_renderer/html_renderer.html#exercise-html-renderer" title="(in Programming in Python)"><span>HTML Renderer Exercise</span></a></p>
-</div>
+<p>So: on to the Object oriented intro!</p>
+<p><a class="reference external" href="https://uwpce-pythoncert.github.io/ProgrammingInPython/exercises/oo_intro/oo_intro.html">https://uwpce-pythoncert.github.io/ProgrammingInPython/exercises/oo_intro/oo_intro.html</a></p>
 </div>
 </div>
 
@@ -364,6 +531,15 @@
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="lightning_talks.html" class="btn btn-neutral float-right" title="Lightning Talks: Fall 2020 Class" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="lesson06.html" class="btn btn-neutral float-left" title="11/17/2020: Odd sentences …" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
