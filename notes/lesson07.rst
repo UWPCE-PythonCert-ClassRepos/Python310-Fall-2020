@@ -3,53 +3,68 @@
 
 .. _notes_lesson07:
 
-####################
-Notes for lesson 07
-####################
+#######################
+11/24/2020: import this
+#######################
 
-11/20/2018
 
 A collection of notes to go over in class, to keep things organized.
 
 Lightning Talks
 ===============
 
-Sopheaktr L Danh
+We've gotten a bit behind -- so lots of lightning talks today!
 
-Bishal Gupta
-
-Maria G Berschauer
-
-Nathan Marc Debard
+|
+| Micha Park
+|
+| Sopheaktr L Danh
+|
+| Hua Shao
+|
+| Vikram Raghavan
+|
+| Farhan Samani
+|
+| Katrina Seok Taylor
+|
+| Bishal Gupta
+|
+| Maria G Berschauer
+|
+| Nathan Marc Debard
+|
 
 Scheduling:
 ===========
 
-Turkey Day weekend
-------------------
+This is Thanksgiving week -- Are Sunday office hours still good?
 
-I'm around all weekend, so can do office hours -- do you want them?
-
-The usual times?
-
-Next Week:
-----------
-
+If I held additional office hours, would you come?
 
 
 Issues that came up during the week.
 ====================================
 
-Naming and Style
-----------------
+Naming Things
+-------------
 
-Read this again:
+There's an adage in programming:
 
-https://uwpce-pythoncert.github.io/PythonCertDevel/modules/NamingThings.html
+.. centered:: **Naming Things is Hard**
 
-And watch this video:
+It really is. But it's also important. Good names for variables make the code a lot easier to read and understand.
 
-https://www.youtube.com/watch?v=hZ7hgYKKnF0
+This may seem like a non-issue when you are working on a small project. When you are in the middle of it, you know exactly what you mean when you are working with a variable called "i" or "item" or "key". But when you go read the code a week, month, year later -- and when that variable is defined somewhere off the page, you really will get confused.
+
+And even worse are names that are just plain "wrong" (probably due to refactoring) a function called `print_something` that doesn't print anything, a variable called `donor` that is really a list of past donations, you get the idea.
+
+Believe me, when I read your code, I really do get confused when variables don't mean what their name suggests they mean. And you will et confused as well, when you re-read the code later one -- maybe even only a week later.
+
+Also, in a larger project, you are stuck with the names you choose up front -- at least with ones for functions and classes that will be used elsewhere. So it's really worth putting some thought into it right up front.
+
+Style
+-----
 
 Some of you are still not following PEP 8 style. If you can't (or don't want to) set up a linter in your editor or IDE, you can run ``pycodestyle`` on your code.
 
@@ -59,16 +74,39 @@ https://pycodestyle.readthedocs.io
 
 Let's give it a quick try.
 
+
 Auto-fixing style
------------------
+.................
 
 If you don't want to fix all that by hand, there are tools to do it for you.
 
-one really nice one is yapf:
+Some options are:
+
+AutoPEP8
+........
+
+https://pypi.org/project/autopep8/
+
+YAPF
+....
 
 https://github.com/google/yapf
 
-Maybe give ``yapf`` a try.
+Black
+.....
+
+https://black.readthedocs.io/en/stable/
+
+These are in order of how "opinionated" or "intrusive" they are. AutoPEP8 only fixes actual PEP8 violations. YAPF is fairly configurable as to what it does, and exactly how. Black only does one thing: make all the code in the Black style. 
+
+
+  "You can have your code in any style you want -- as long as it's Black"
+
+Adapted from the famous quote by Henry Ford about the model T:
+
+  `"Any customer can have a car painted any color that he wants so long as it is black" <https://en.wikiquote.org/wiki/Henry_Ford>`_
+
+Maybe give one of them a try. You can also likely plug one or the other into your editor.
 
 
 Chaining ``or``, etc.
@@ -112,7 +150,7 @@ It allows you to do nifty (and very readable) things like:
 
 That's nice, 'cause it looks a lot like math -- simple and clear.
 
-and that means:
+and it means:
 
 .. code-block:: python
 
@@ -138,7 +176,7 @@ So what's going on here?
     Out[43]: False
 
 
-Turns out that ``in``, ``not``, ``not in`` are considered comparison operators too.
+Turns out that ``in``, ``not``, ``not in`` are considered comparison operators too (at least in this context)
 
 
 Mutating vs. re-assigning
@@ -175,8 +213,10 @@ This is what happens:
 
 That's a LOT of overhead!
 
-Be cognizant of when you are mutating (changing) an object vs. creating a new one and assigning it to the same name. When you do assignment (``=``) you are probably creating a new object -- is that what you want?
+mutating vs assigning
+.....................
 
+Be cognizant of when you are mutating (changing) an object vs. creating a new one and assigning it to the same name. When you do assignment (``=``) you are probably creating a new object -- is that what you want? And if you are NOT using ``=``, then you are probably mutating an existing object.
 
 ``+=`` is different -- it is the "in_place" operator, so:
 
@@ -239,53 +279,74 @@ And no one wanted to add **two** new sets of operators.
 
 https://www.python.org/dev/peps/pep-0203/
 
+What to return?
+---------------
 
-Working with dicts
-------------------
+It is a convention in Python to return a new object if one is created (kind of necessary, actually), but to return ``None`` if a new object is NOT created -- i.e. the existing object is mutated. Contrast strings and lists:
 
-Want to know if something is in a dict? You could do:
+Strings are immutable, so they can't be changed in place:
+
+.. code-block:: ipython
+
+    In [11]: a_string = "this is a string"
+
+    In [12]: new_string = a_string.capitalize()
+
+    In [13]: print(new_string)
+    This is a string
+
+    In [14]: print(a_string)
+    this is a string
+
+Whereas lists are mutable, and they CAN be changed in place:
+
+.. code-block:: ipython
+
+    In [15]: a_list = [4, 2, 8, 3, 9, 1, 4]
+
+    In [16]: new_list = a_list.sort()
+
+    In [17]: print(new_list)
+    None
+
+    In [18]: print(a_list)
+    [1, 2, 3, 4, 4, 8, 9]
+
+note that the mutating method, ``.sort()`` returns ``None``. This makes it a bit annoying sometimes, as you can't chain operations, but it also makes it less confusing.
+
+This is a standard practice in the Python standard library, but you really should follow it in your own code:
 
 .. code-block:: python
 
-    if name not in donors.keys():
+    def add_donor(new_donor):
+        """
+        add a new donor to the global donor database
+        """
+        ...
+        return None
 
-But that's creating a dict_keys object unnecessarily.
+This REALLY should not return the global donor database.
 
-You can simply do:
+Similarly, if a function takes a mutable on input, and changes it in place, it should not return the passed-in object:
+
 
 .. code-block:: python
 
-    if name not in donors:
+    def add_donation(donor, donation):
+        """
+        add a new donation to a donor
+        
+        :param donor: the donor object to add the donation to
 
-Cleaner -- but is it faster? It'll be a lot faster if the ``dict_keys`` object doesn't directly support ``in``.  Let's take a look:
+        :param donation: the donation to add
+        """
 
+        donor[1].append(donation)
 
-unit tests should be isolated
------------------------------
+        # don't do this!!!!
+        return donor
 
-Ideally, each unit test should be able to run all on its own, and it should NOT matter what order tests run in.
-
-That can be a bit of a trick with mailroom -- as you might have a test of adding a new donor to the database, and another test that asserts that the report has the right number of donors in it.
-
-Let's look a how to deal with that.
-
-
-A Little Code Refactoring
--------------------------
-
-(If we have time...)
-
-After making a few comments on a block of mailroom code, I decided it might be instructive to review and refactor it live with the class. The code can be found in the class repo in:
-
-``/examples/lesson07/refactor.py``
-
-That code works now -- so the first thing we're going to do is make tests for it. Then we can refactor away and know it still works.
-
-
-Any other questions/issues before we get into classes?
-------------------------------------------------------
-
-Note that we'll be employing testing the rest of the class, so if you don't quite "get it",  you'll have more chances :-)
+This should return ``None`` to indicate that the passed-in donor object was changed in place.
 
 
 Break -- Then Lightning Talks
@@ -294,17 +355,65 @@ Break -- Then Lightning Talks
 
 
 
+Packaging
+=========
+
+Are you all thoroughly confused now?
+
+There are a number of subtleties here: 
+
+relative importing
+..................
+
+Where does Python look for modules and packages?
+................................................
+
+what about scripts??
+....................
+
+It turns out that the "old" ``scripts`` keyword to ``setup()`` is not totally reliable (particularly on Windows). And it can cause some complications. I always liked the simplicity of scripts, but it really is a better idea to use setuptools' console_scripts entry point. 
+
+But the errors we saw are instructive -- so let's take a look. IN particular, what happens when you have a script with the same name as your package?
+
+
+
+Let's take a look at my packaged up mailroom to see how that works.
+
+args and kwargs
+---------------
+
+Python's very flexible parameter specification and argument passing is really powerful, but it can be confusing: 
+
+Any particular confusions?
+
+What to look at my ``*args, **kwargs`` Lab?
+
+
+
+Break -- Then Lightning Talks
+=============================
+
+
+Any other questions/issues before we get into classes?
+------------------------------------------------------
+
+Note that we'll be employing packaging and testing the rest of the class, so if you don't quite "get it",  you'll have more chances :-)
+
+
+
 Classes!
 ========
 
 Classes are the core of Object Oriented programming. Rather than talk about them in the abstract, we'll start doing a real problem, and talk about the pieces as we go.
 
-html_render
------------
+So: on to the Object oriented intro!
 
-So on to the the html_render assignment:
+https://uwpce-pythoncert.github.io/ProgrammingInPython/exercises/oo_intro/oo_intro.html
 
-:ref:`exercise_html_renderer`
+
+
+
+
 
 
 
