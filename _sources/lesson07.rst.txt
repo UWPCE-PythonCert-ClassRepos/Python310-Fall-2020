@@ -20,8 +20,6 @@ We've gotten a bit behind -- so lots of lightning talks today!
 |
 | Sopheaktr L Danh
 |
-| Hua Shao
-|
 | Vikram Raghavan
 |
 | Farhan Samani
@@ -356,8 +354,6 @@ Break -- Then Lightning Talks
 | Micha Park
 |
 | Sopheaktr L Danh
-|
-| Hua Shao
 |
 | Vikram Raghavan
 |
