@@ -5,7 +5,7 @@ package setup script for mailroom
 """
 
 from pathlib import Path
-from setuptools import setup
+from setuptools import setup, find_packages
 
 
 def get_version(package):
@@ -22,7 +22,8 @@ def get_version(package):
 
 setup(name='mailroom',
       version=get_version(),
-      packages=['mailroom', 'mailroom/tests'],
+      packages=find_packages(),
+      # packages=['mailroom', 'mailroom/tests'],
       scripts=['scripts/mailroom.py'],
       author='An Awsome Coder',
       author_email='aac@example.com',

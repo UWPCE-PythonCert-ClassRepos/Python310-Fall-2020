@@ -8,7 +8,7 @@ import sys
 # handy utility to make pretty printing easier
 from textwrap import dedent
 
-import mailroom.model as mr
+from . import model as mr
 
 
 def get_donation_amount():

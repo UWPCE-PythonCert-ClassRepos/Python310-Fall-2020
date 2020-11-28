@@ -20,8 +20,6 @@ We've gotten a bit behind -- so lots of lightning talks today!
 |
 | Sopheaktr L Danh
 |
-| Hua Shao
-|
 | Vikram Raghavan
 |
 | Farhan Samani
@@ -353,7 +351,14 @@ Break -- Then Lightning Talks
 =============================
 
 
-
+| Micha Park
+|
+| Sopheaktr L Danh
+|
+| Vikram Raghavan
+|
+| Farhan Samani
+|
 
 Packaging
 =========
@@ -362,25 +367,40 @@ Are you all thoroughly confused now?
 
 There are a number of subtleties here: 
 
+
 relative importing
-..................
+------------------
+
+what the heck does:
+
+``from .mailroom import model as m``
+
+mean?
+
+What about:
+
+``from ..mailroom.cli import main`` ?
+
 
 Where does Python look for modules and packages?
-................................................
+------------------------------------------------
+
+``sys.path``: let's take a look.
+
+Note that the current working directory is put on sys,path by default -- what are the implications of that?
 
 what about scripts??
-....................
+--------------------
 
 It turns out that the "old" ``scripts`` keyword to ``setup()`` is not totally reliable (particularly on Windows). And it can cause some complications. I always liked the simplicity of scripts, but it really is a better idea to use setuptools' console_scripts entry point. 
 
-But the errors we saw are instructive -- so let's take a look. IN particular, what happens when you have a script with the same name as your package?
-
+But the errors we saw are instructive -- so let's take a look. In particular, what happens when you have a script with the same name as your package?
 
 
 Let's take a look at my packaged up mailroom to see how that works.
 
 args and kwargs
----------------
+===============
 
 Python's very flexible parameter specification and argument passing is really powerful, but it can be confusing: 
 
@@ -393,12 +413,21 @@ What to look at my ``*args, **kwargs`` Lab?
 Break -- Then Lightning Talks
 =============================
 
+|
+| Katrina Seok Taylor
+|
+| Bishal Gupta
+|
+| Maria G Berschauer
+|
+| Nathan Marc Debard
+|
+
 
 Any other questions/issues before we get into classes?
 ------------------------------------------------------
 
 Note that we'll be employing packaging and testing the rest of the class, so if you don't quite "get it",  you'll have more chances :-)
-
 
 
 Classes!
