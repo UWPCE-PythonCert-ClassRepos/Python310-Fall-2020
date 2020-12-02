@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Notes for lesson 08 &mdash; IntroToPython: Fall 2020 1.0 documentation</title>
+  <title>Dec 1, 2020: A Classy Topic &mdash; IntroToPython: Fall 2020 1.0 documentation</title>
   
 
   
@@ -35,7 +35,9 @@
 
     
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Lightning Talks: Fall 2020 Class" href="lightning_talks.html" />
+    <link rel="prev" title="11/24/2020: import this" href="lesson07.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -84,9 +86,33 @@
               
             
             
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="lesson01.html">10/13/2020: Introduction to Py310: Programming in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lesson02.html">10/20/2020: And now on to actual coding!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson03.html">10/27/2020: Real code!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson04.html">11/02/2020: A actual Program!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson05.html">11/19/2020: testing, testing, 1, 2, 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson06.html">11/17/2020: Odd sentences …</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson07.html">11/24/2020: import this</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Dec 1, 2020: A Classy Topic</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#lightning-talks">Lightning Talks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#issues-that-came-up-during-the-week">Issues that came up during the week.</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#for-else"><code class="docutils literal notranslate"><span class="pre">for</span></code> – <code class="docutils literal notranslate"><span class="pre">else</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#what-to-test-and-how">What to test? And how?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Lightning Talks</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#the-report-class-and-basic-oo">The Report Class and basic OO</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Lightning Talks</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#magic-methods">Magic Methods</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#python-static-vs-class-methods">Python static vs. class methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#circular-reasoning">Circular Reasoning</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="lightning_talks.html">Lightning Talks: Fall 2020 Class</a></li>
@@ -136,7 +162,7 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Notes for lesson 08</li>
+      <li>Dec 1, 2020: A Classy Topic</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -155,9 +181,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="notes-for-lesson-08">
-<span id="notes-lesson08"></span><h1>Notes for lesson 08<a class="headerlink" href="#notes-for-lesson-08" title="Permalink to this headline">¶</a></h1>
-<p>1/27/2018</p>
+  <div class="section" id="dec-1-2020-a-classy-topic">
+<span id="notes-lesson08"></span><h1>Dec 1, 2020: A Classy Topic<a class="headerlink" href="#dec-1-2020-a-classy-topic" title="Permalink to this headline">¶</a></h1>
 <p>A collection of notes to go over in class, to keep things organized.</p>
 <div class="section" id="lightning-talks">
 <h2>Lightning Talks<a class="headerlink" href="#lightning-talks" title="Permalink to this headline">¶</a></h2>
@@ -168,55 +193,69 @@
 </div>
 <div class="section" id="issues-that-came-up-during-the-week">
 <h2>Issues that came up during the week.<a class="headerlink" href="#issues-that-came-up-during-the-week" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="for-else">
+<h3><code class="docutils literal notranslate"><span class="pre">for</span></code> – <code class="docutils literal notranslate"><span class="pre">else</span></code><a class="headerlink" href="#for-else" title="Permalink to this headline">¶</a></h3>
+<p>how many of you remember that you can use <code class="docutils literal notranslate"><span class="pre">else</span></code> with for?</p>
+<p>From the Report Class:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">remove_row</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">row_id</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;Remove a row object by the row ID&quot;&quot;&quot;</span>
+
+    <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">rows</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">row_id</span> <span class="o">==</span> <span class="n">row_id</span><span class="p">:</span>
+            <span class="n">foundid</span> <span class="o">=</span> <span class="n">r</span>
+            <span class="k">break</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">foundid</span> <span class="o">==</span> <span class="n">r</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Invalid row_id.&quot;</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">rows</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">foundid</span><span class="p">)</span>
+    <span class="k">return</span> <span class="kc">None</span>
+</pre></div>
+</div>
+</div>
 <div class="section" id="what-to-test-and-how">
 <h3>What to test? And how?<a class="headerlink" href="#what-to-test-and-how" title="Permalink to this headline">¶</a></h3>
 <p>Make sure you test what matters about a function’s result – it’s easiest (particularly if you wrote the code first) to simply match results, but your system will be more flexible if you test for the parts that matter, and won’t change.</p>
 <p>Ideally, your tests should be as isolated as possible. So if you, for instance, need to test that the correct letter is generated from a donor object, then create a donor object in the test, and pass that in, rather than pulling it from the donor_db – that way, the donor_db could be broken, and the individual tests will pass.</p>
-<p>If the object(s) you need to create are complex, then you can use “fixtures” to set things up for you. We’ll get into that in the next quarter.</p>
-<p>This will start to make more and more sense as we do more testing – and particularly when we do TDD and write the tests along with the code.</p>
-<div class="section" id="example">
-<h4>Example:<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h4>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test_p_tag</span><span class="p">():</span>
-    <span class="k">assert</span> <span class="n">Para</span><span class="o">.</span><span class="n">tag</span> <span class="o">==</span> <span class="s1">&#39;p&#39;</span>
-</pre></div>
-</div>
-<p>I know I started out that way – ‘cause there wasn’t anything else to test. But this is really testing an implementation detail – the Para elements has a attribute named “tag” that is ‘p’. But is that a public part of the API? do we care? – No. What we care about is that the correct tag gets rendered, so a test for THAT makes more sense:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test_render_para</span><span class="p">():</span>
-    <span class="n">my_stuff</span> <span class="o">=</span> <span class="s1">&#39;spam, spam, spam&#39;</span>
-    <span class="n">p</span> <span class="o">=</span> <span class="n">Para</span><span class="p">(</span><span class="n">my_stuff</span><span class="p">)</span>
-    <span class="n">more_stuff</span> <span class="o">=</span> <span class="s1">&#39;eggs, eggs, eggs&#39;</span>
-    <span class="n">p</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">more_stuff</span><span class="p">)</span>
-    <span class="n">contents</span> <span class="o">=</span> <span class="n">render_element</span><span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
-    <span class="k">assert</span> <span class="n">contents</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;&lt;p&gt;&#39;</span><span class="p">)</span>
-    <span class="k">assert</span> <span class="n">contents</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;&lt;/p&gt;&#39;</span><span class="p">)</span>
-    <span class="k">assert</span> <span class="n">my_stuff</span> <span class="ow">in</span> <span class="n">contents</span>
-    <span class="k">assert</span> <span class="n">more_stuff</span> <span class="ow">in</span> <span class="n">contents</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="do-you-always-need-an-init">
-<h3>Do you always need an <code class="docutils literal notranslate"><span class="pre">__init__</span></code>?<a class="headerlink" href="#do-you-always-need-an-init" title="Permalink to this headline">¶</a></h3>
-<p>No – you don’t :-)</p>
-<p>The ONLY thing “special” about <code class="docutils literal notranslate"><span class="pre">__init__</span></code> is that it is automatically called when an instance is created.  Other than that, it’s a regular method. So if you don’t define one, then the superclass’ <code class="docutils literal notranslate"><span class="pre">__init__</span></code> will be called. (and <code class="docutils literal notranslate"><span class="pre">object</span></code>, the default superclass, has a default one – so it’s always there somewhere).</p>
-<p>That’s what inheritance is all about – the subclass inherits ALL the superclasses’ methods – including <code class="docutils literal notranslate"><span class="pre">__init__</span></code>.</p>
-<p>So never write an <code class="docutils literal notranslate"><span class="pre">__init__</span></code> that does nothing but call the superclass <code class="docutils literal notranslate"><span class="pre">__init__</span></code></p>
-</div>
-<div class="section" id="subclasses-and-self">
-<h3>Subclasses and <code class="docutils literal notranslate"><span class="pre">self</span></code><a class="headerlink" href="#subclasses-and-self" title="Permalink to this headline">¶</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">self</span></code> is the first parameter in all methods. But why??</p>
-<p><code class="docutils literal notranslate"><span class="pre">self</span></code> is the “current” instance of the object. This means that you don’t know at code writing time what type it is – is it the current class? some subclass?</p>
-<p>Let’s experiment with that.</p>
-</div>
-<div class="section" id="html-render">
-<h3>html_render<a class="headerlink" href="#html-render" title="Permalink to this headline">¶</a></h3>
-<p>Let’s look at up to step 3….</p>
-<p>And move along…</p>
+<p>For a function that creates substantial output – like maybe a thanks you letter, yest parts of the letter that matter, rather than the entire text:</p>
+<ul class="simple">
+<li><p>Was the donor’s name inserted correctly?</p></li>
+<li><p>Was the donation amount inserted correctly?</p></li>
+<li><p>any other part that tests the logic of the function.</p></li>
+</ul>
+<p>That way, you can change the details of the letter template, and the tests will still pass.</p>
 </div>
 <div class="section" id="id1">
 <h3>Lightning Talks<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<p>Circle class…</p>
+<p>Let’s take a break and …</p>
+<p>David Brandt</p>
+<p>Matt Parmett</p>
+</div>
+</div>
+<div class="section" id="the-report-class-and-basic-oo">
+<h2>The Report Class and basic OO<a class="headerlink" href="#the-report-class-and-basic-oo" title="Permalink to this headline">¶</a></h2>
+<p>Any thoughts / questions?</p>
+<p>did <code class="docutils literal notranslate"><span class="pre">attrgetter</span></code> make sense?</p>
+<div class="section" id="id2">
+<h3>Lightning Talks<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>Victor Alexander Orozco</p>
+<p>Shadle A Stewart</p>
+</div>
+</div>
+<div class="section" id="magic-methods">
+<h2>Magic Methods<a class="headerlink" href="#magic-methods" title="Permalink to this headline">¶</a></h2>
+<p>This next topic is key to making your classes “fit in” with the built-ins.</p>
+<p>Let’s start with the Row class – and give it a __repr__: that would have helped a number of you with debugging :-)</p>
+<div class="section" id="python-static-vs-class-methods">
+<h3>Python static vs. class methods<a class="headerlink" href="#python-static-vs-class-methods" title="Permalink to this headline">¶</a></h3>
+<p>If any of you have a backgroun din Java/C++/C# – this will be familiar, but maybe not what you expect.</p>
+<p>So let’s go over it a bit …</p>
 <p><a class="reference external" href="https://uwpce-pythoncert.github.io/ProgrammingInPython/modules/StaticAndClassMethods.html#static-and-class-methods" title="(in Programming in Python)"><span>Static and Class Methods</span></a></p>
+</div>
+<div class="section" id="circular-reasoning">
+<h3>Circular Reasoning<a class="headerlink" href="#circular-reasoning" title="Permalink to this headline">¶</a></h3>
+<p>Now let’s get a start on the Circle class</p>
 </div>
 </div>
 </div>
@@ -226,6 +265,15 @@
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="lightning_talks.html" class="btn btn-neutral float-right" title="Lightning Talks: Fall 2020 Class" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="lesson07.html" class="btn btn-neutral float-left" title="11/24/2020: import this" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

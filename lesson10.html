@@ -87,6 +87,12 @@
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="lesson01.html">10/13/2020: Introduction to Py310: Programming in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lesson02.html">10/20/2020: And now on to actual coding!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson03.html">10/27/2020: Real code!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson04.html">11/02/2020: A actual Program!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson05.html">11/19/2020: testing, testing, 1, 2, 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson06.html">11/17/2020: Odd sentences …</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson07.html">11/24/2020: import this</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson08.html">Notes for lesson 08</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="lightning_talks.html">Lightning Talks: Fall 2020 Class</a></li>
@@ -228,9 +234,23 @@
 </div>
 <div class="section" id="id1">
 <h2>Lightning Talks<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="a-little-code-review-refactor">
-<h3>A little code review / refactor<a class="headerlink" href="#a-little-code-review-refactor" title="Permalink to this headline">¶</a></h3>
-<p>Reviewing a trigrams solution, I happened upon a function that needed a bit of clean-up refactoring. Let’s take a look now. It’s in the class repo here:</p>
+<div class="section" id="do-you-always-need-an-init">
+<h3>Do you always need an <code class="docutils literal notranslate"><span class="pre">__init__</span></code>?<a class="headerlink" href="#do-you-always-need-an-init" title="Permalink to this headline">¶</a></h3>
+<p>No – you don’t :-)</p>
+<p>The ONLY thing “special” about <code class="docutils literal notranslate"><span class="pre">__init__</span></code> is that it is automatically called when an instance is created.  Other than that, it’s a regular method. So if you don’t define one, then the superclass’ <code class="docutils literal notranslate"><span class="pre">__init__</span></code> will be called. (and <code class="docutils literal notranslate"><span class="pre">object</span></code>, the default superclass, has a default one – so it’s always there somewhere).</p>
+<p>That’s what inheritance is all about – the subclass inherits ALL the superclasses’ methods – including <code class="docutils literal notranslate"><span class="pre">__init__</span></code>.</p>
+<p>So never write an <code class="docutils literal notranslate"><span class="pre">__init__</span></code> that does nothing but call the superclass <code class="docutils literal notranslate"><span class="pre">__init__</span></code></p>
+</div>
+<div class="section" id="subclasses-and-self">
+<h3>Subclasses and <code class="docutils literal notranslate"><span class="pre">self</span></code><a class="headerlink" href="#subclasses-and-self" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">self</span></code> is the first parameter in all methods. But why??</p>
+<p><code class="docutils literal notranslate"><span class="pre">self</span></code> is the “current” instance of the object. This means that you don’t know at code writing time what type it is – is it the current class? some subclass?</p>
+<p>Let’s experiment with that.</p>
+</div>
+<div class="section" id="html-render">
+<h3>html_render<a class="headerlink" href="#html-render" title="Permalink to this headline">¶</a></h3>
+<p>Let’s look at up to step 3….</p>
+<p>And move along…</p>
 </div>
 </div>
 <div class="section" id="the-next-class">

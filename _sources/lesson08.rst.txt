@@ -3,11 +3,10 @@
 
 .. _notes_lesson08:
 
-####################
-Notes for lesson 08
-####################
+###########################
+Dec 1, 2020: A Classy Topic
+###########################
 
-1/27/2018
 
 A collection of notes to go over in class, to keep things organized.
 
@@ -22,8 +21,35 @@ Victor Alexander Orozco
 
 Shadle A Stewart
 
+
 Issues that came up during the week.
 ====================================
+
+
+``for`` -- ``else``
+-------------------
+
+how many of you remember that you can use ``else`` with for?
+
+From the Report Class:
+
+.. code-block:: python
+
+    def remove_row(self, row_id):
+
+        """Remove a row object by the row ID"""
+
+        for r in self.rows:
+            if r.row_id == row_id:
+                foundid = r
+                break
+        try:
+            foundid == r
+        except ValueError:
+            print("Invalid row_id.")
+        self.rows.remove(foundid)
+        return None
+
 
 What to test? And how?
 ----------------------
@@ -32,71 +58,68 @@ Make sure you test what matters about a function's result -- it's easiest (parti
 
 Ideally, your tests should be as isolated as possible. So if you, for instance, need to test that the correct letter is generated from a donor object, then create a donor object in the test, and pass that in, rather than pulling it from the donor_db -- that way, the donor_db could be broken, and the individual tests will pass.
 
-If the object(s) you need to create are complex, then you can use "fixtures" to set things up for you. We'll get into that in the next quarter.
+For a function that creates substantial output -- like maybe a thanks you letter, yest parts of the letter that matter, rather than the entire text:
 
-This will start to make more and more sense as we do more testing -- and particularly when we do TDD and write the tests along with the code.
+* Was the donor's name inserted correctly?
 
-Example:
-........
+* Was the donation amount inserted correctly?
 
-.. code-block:: python
+* any other part that tests the logic of the function.
 
-    def test_p_tag():
-        assert Para.tag == 'p'
+That way, you can change the details of the letter template, and the tests will still pass.
 
-I know I started out that way -- 'cause there wasn't anything else to test. But this is really testing an implementation detail -- the Para elements has a attribute named "tag" that is 'p'. But is that a public part of the API? do we care? -- No. What we care about is that the correct tag gets rendered, so a test for THAT makes more sense:
-
-.. code-block:: python
-
-    def test_render_para():
-        my_stuff = 'spam, spam, spam'
-        p = Para(my_stuff)
-        more_stuff = 'eggs, eggs, eggs'
-        p.append(more_stuff)
-        contents = render_element(p).strip()
-        assert contents.startswith('<p>')
-        assert contents.endswith('</p>')
-        assert my_stuff in contents
-        assert more_stuff in contents
-
-
-Do you always need an ``__init__``?
------------------------------------
-
-No -- you don't :-)
-
-The ONLY thing "special" about ``__init__`` is that it is automatically called when an instance is created.  Other than that, it's a regular method. So if you don't define one, then the superclass' ``__init__`` will be called. (and ``object``, the default superclass, has a default one -- so it's always there somewhere).
-
-That's what inheritance is all about -- the subclass inherits ALL the superclasses' methods -- including ``__init__``.
-
-So never write an ``__init__`` that does nothing but call the superclass ``__init__``
-
-Subclasses and ``self``
------------------------
-
-``self`` is the first parameter in all methods. But why??
-
-``self`` is the "current" instance of the object. This means that you don't know at code writing time what type it is -- is it the current class? some subclass?
-
-Let's experiment with that.
-
-html_render
------------
-
-Let's look at up to step 3....
-
-And move along...
 
 Lightning Talks
 ---------------
 
-Circle class...
+Let's take a break and ...
+
+David Brandt
+
+Matt Parmett
 
 
-.. Python static vs. class methods
-.. -------------------------------
+The Report Class and basic OO
+=============================
 
-.. Coming from Java/C++, this was always confusing to me. Now I think I understand this better, and I may share my understanding and realization with class. Let's go over the static/class methods materials:
+
+Any thoughts / questions?
+
+did ``attrgetter`` make sense?
+
+
+
+Lightning Talks
+---------------
+
+Victor Alexander Orozco
+
+Shadle A Stewart
+
+
+Magic Methods
+=============
+
+This next topic is key to making your classes "fit in" with the built-ins.
+
+Let's start with the Row class -- and give it a __repr__: that would have helped a number of you with debugging :-)
+
+
+Python static vs. class methods
+-------------------------------
+
+If any of you have a backgroun din Java/C++/C# -- this will be familiar, but maybe not what you expect.
+
+So let's go over it a bit ...
 
 :ref:`static_and_class_methods`
+
+
+Circular Reasoning
+------------------
+
+Now let's get a start on the Circle class
+
+
+
 

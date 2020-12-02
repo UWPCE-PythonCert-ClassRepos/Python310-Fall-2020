@@ -34,7 +34,9 @@ Week 6
 
 Week 7
 ------
-
+Farhan Java vs Python
+Danh: path finding
+Micha Park: json REST services
 
 Week 8
 ------
