@@ -1,6 +1,7 @@
 """
 test code for the Report class(es)
 """
+import pytest
 
 from report import Row, Report
 
@@ -66,7 +67,7 @@ def test_add_row():
     # implementation detail, which ou want to be careful of
     # but it will catch an error in the add_row, even when
     # the other methods are not yet written
-    assert len(report.rows) == 1
+    assert report.size() == 1
 
 
 def test_report_length():
@@ -119,7 +120,7 @@ def test_find_row():
     """
     report = example_report()
 
-    row = report.rows[3]
+    row = report._rows[3]
 
     found = report.find_row(row.id)
 
@@ -134,7 +135,7 @@ def test_remove_rows():
     report = example_report()
 
     # get a row to test with
-    row = report.rows[2]
+    row = report._rows[2]
 
     len_before = report.size()
 
@@ -143,6 +144,23 @@ def test_remove_rows():
     assert report.size() == len_before - 1
 
     assert report.find_row(row.id) is None
+
+
+def test_remove_row_bad_id():
+    report = example_report()
+
+    with pytest.raises(ValueError):
+        report.remove_row("y68u768ga")
+
+
+def test_remove_row_bad_id_not_change():
+    report = example_report()
+    orig_size = report.size()
+
+    try:
+        report.remove_row("y68u768ga")
+    except ValueError:
+        assert report.size() == orig_size
 
 
 def test_paged_rows_lname():

@@ -40,11 +40,11 @@ class Report:
         :param limit: the maximum number of rows in a page
         """
         self.limit = limit
-        self.rows = []
+        self._rows = []
 
     def add_row(self, row):
         """Add a row object to the report"""
-        self.rows.append(row)
+        self._rows.append(row)
 
     def remove_row(self, row_id):
         """
@@ -52,10 +52,12 @@ class Report:
 
         :param row_id: the id of the row to be removed
         """
-        for i, r in enumerate(self.rows):
+        for r in self._rows:
             if r.id == row_id:
                 break
-        del self.rows[i]
+        else:
+            raise ValueError(f"No row with id: {row_id} in the report")
+        self._rows.remove(r)
 
     def find_row(self, row_id):
         """
@@ -63,7 +65,7 @@ class Report:
 
         :param row_id: the id of the row you are looking for
         """
-        for i, r in enumerate(self.rows):
+        for i, r in enumerate(self._rows):
             if r.id == row_id:
                 return r
         return None
@@ -72,7 +74,7 @@ class Report:
         """
         Return how many total rows the report has
         """
-        return len(self.rows)
+        return len(self._rows)
 
     def get_number_of_pages(self):
         """
@@ -113,7 +115,7 @@ class Report:
         else:
             reverse = False
 
-        all_rows = sorted(self.rows, key=attrgetter(sort_field), reverse=reverse)
+        all_rows = sorted(self._rows, key=attrgetter(sort_field), reverse=reverse)
 
         for row in all_rows:
             print(row.fname, row.lname)

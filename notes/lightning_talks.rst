@@ -40,6 +40,16 @@ Micha Park: json REST services
 
 Week 8
 ------
+Maria B: CAD and Python
+Bishal: Data science at docusign: Snowflake
+
+David Brandt: Google trends
+
+Matt Parmett: Spotify API
+
+Victor Alexander Orozco: 3D printing
+
+Shadle A Stewart: Snow data API access
 
 
 Week 9
