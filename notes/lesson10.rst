@@ -106,10 +106,35 @@ Lightning Talks
 ===============
 
 
-A little code review / refactor
--------------------------------
 
-Reviewing a trigrams solution, I happened upon a function that needed a bit of clean-up refactoring. Let's take a look now. It's in the class repo here:
+
+Do you always need an ``__init__``?
+-----------------------------------
+
+No -- you don't :-)
+
+The ONLY thing "special" about ``__init__`` is that it is automatically called when an instance is created.  Other than that, it's a regular method. So if you don't define one, then the superclass' ``__init__`` will be called. (and ``object``, the default superclass, has a default one -- so it's always there somewhere).
+
+That's what inheritance is all about -- the subclass inherits ALL the superclasses' methods -- including ``__init__``.
+
+So never write an ``__init__`` that does nothing but call the superclass ``__init__``
+
+Subclasses and ``self``
+-----------------------
+
+``self`` is the first parameter in all methods. But why??
+
+``self`` is the "current" instance of the object. This means that you don't know at code writing time what type it is -- is it the current class? some subclass?
+
+Let's experiment with that.
+
+html_render
+-----------
+
+Let's look at up to step 3....
+
+And move along...
+
 
 
 

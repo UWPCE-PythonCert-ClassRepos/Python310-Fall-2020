@@ -25,7 +25,7 @@ Notes for each Lesson
     lesson05
     lesson06
     lesson07
-..    lesson08
+    lesson08
 ..    lesson09
 ..    lesson10
 
