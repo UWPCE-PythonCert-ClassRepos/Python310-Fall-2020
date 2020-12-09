@@ -253,4 +253,9 @@ def test_sphere_sort():
         assert s1 <= s2
 
 
+def test_sphere_multiply():
+    s1 = Sphere(1)
+
+    assert s1 * 4 == Sphere(4)
+
 

@@ -9,11 +9,13 @@ Used to demo propeties and "magic methods"
 from math import pi
 import functools
 
+def make_circle_from_diameter(d):
+    return Circle(d / 2)
 
 # this is a trick to make all the greater than, less than, etc work.
 # see: https://docs.python.org/3/library/functools.html#functools.total_ordering
 @functools.total_ordering
-class Circle(object):
+class Circle:
     """
     simple class to represent a circle
 
@@ -27,6 +29,7 @@ class Circle(object):
         :param radius: the radius of the circle
         """
 
+        print("in Circle __init__", radius)
         self.radius = float(radius)
 
     @classmethod
@@ -36,7 +39,9 @@ class Circle(object):
 
         :param diameter: the diameter of the circle
         """
-
+        print("in from_diameter:", diameter)
+        # return cls(diameter / 2.0)
+        print("cls is:", cls)
         return cls(diameter / 2.0)
 
     @property
@@ -59,11 +64,12 @@ class Circle(object):
     def __repr__(self):
         # using the repr (!r) formatter is a neat trick
         # return "Circle({!r})".format(self.radius)
-        return f"Circle({self.radius!r})"
+        return f"{self.__class__.__name__}({self.radius:g})"
 
     def __str__(self):
         # return "Circle with radius: {:g}".format(self.radius)
-        return f"Circle with radius: {self.radius:g}"
+
+        return f"{self.__class__.__name__} with radius: {self.radius:g}"
 
     @staticmethod
     def sort_key(a_circle):
@@ -86,7 +92,8 @@ class Circle(object):
         return self
 
     def __mul__(self, factor):
-        return Circle(self.radius * factor)
+        print("in __mul__:", self.__class__)
+        return self.__class__(self.radius * factor)
 
     def __imul__(self, factor):
         """see __iadd__"""
@@ -119,9 +126,9 @@ class Circle(object):
         except AttributeError:
             return NotImplemented
 
-    def __lt__(self, other):
+    def __gt__(self, other):
         try:
-            return self.radius < other.radius
+            return self.radius > other.radius
         except AttributeError:
             return NotImplemented
 
@@ -134,6 +141,7 @@ class Sphere(Circle):
     A simple Sphere object, which you can do math with...
     """
 
+    @property
     def volume(self):
         return 4 / 3 * pi * self.radius ** 3
 
@@ -141,9 +149,10 @@ class Sphere(Circle):
     def area(self):
         return 4 * pi * self.radius ** 2
 
-    def __repr__(self):
-        return "Sphere({:g})".format(self.radius)
 
-    def __str__(self):
-        return "Sphere with radius: {:g}".format(self.radius)
+    # def __repr__(self):
+    #     return "Sphere({:g})".format(self.radius)
+
+    # def __str__(self):
+    #     return "Sphere with radius: {:g}".format(self.radius)
 

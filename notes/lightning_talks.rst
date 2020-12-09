@@ -54,6 +54,11 @@ Shadle A Stewart: Snow data API access
 
 Week 9
 ------
+Chris Smith: stock analysis
+Maria Dacutan: subprocess module
+Akulpit: Application performance monitoring
+
+Roohie Menon: not there.
 
 
 Week 10
