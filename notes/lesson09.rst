@@ -3,11 +3,10 @@
 
 .. _notes_lesson09:
 
-####################
-Notes for lesson 09
-####################
+###############################################
+Dec 8, 2020: Around around and around we go ...
+###############################################
 
-12/4/2018
 
 A collection of notes to go over in class, to keep things organized.
 
@@ -26,12 +25,61 @@ Roohie Menon
 Issues that came up during the week.
 ====================================
 
+classmethods
+------------
+
+You really want to USE the  ``cls`` parameter in a classmethod::
+
+    @classmethod
+    def from_diameter(cls, diameter):
+        radius = diameter / 2
+        return Circle(radius)
+
+should be::
+
+    @classmethod
+    def from_diameter(cls, diameter):
+        radius = diameter / 2
+        return cls(radius)
+
+Why? Subclassing!
+
+Let's play with that a bit ....
+
+NotImplemented
+--------------
+
+``NotImplemented`` is a special value that can be used as a flag to indicate that a comparison cannot be made.
+
+https://docs.python.org/3/library/constants.html?highlight=notimplemented#NotImplemented
+
+Total Ordering?!?
+-----------------
+
+What does that mean?
+
+"Total Order" is a mathematical concept that's a bit beyond me :-)
+
+But the layperson's version is simply that two things are either less than, equal, or greater than each other in a consistent way.
+
+And what *that* means is that if you define equality, and one of less-than or greater-than, the others can all be derived from those two.
+
+So that is what the ``functools.total_ordering`` decorator does: it automatically creates the full set of comparison operators in terms if the two provided.
+
+Let's take a quick look at my solution to see how that works.
+
+
 ``sum()``
 ---------
 
-You can use ``sum()`` for things other than numbers. Anything that you can add, you can use ``sum()`` for, but you need to give it a "start" value:
+You can use ``sum()`` for things other than numbers. Anything that you can add, you can use ``sum()`` for, but you need to give it a "start" value. YOu can use sum() on circles if you want::
 
-From trigrams:
+.. code-block:: ipython
+
+    In [16]: sum([Circle(2), Circle(3), Circle(4)], start=Circle(0))
+    Out[16]: Circle(9.0)
+
+Or from trigrams:
 
 .. code-block:: ipython
 
