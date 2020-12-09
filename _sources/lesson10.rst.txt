@@ -14,8 +14,6 @@ A collection of notes to go over in class, to keep things organized.
 Lightning Talks
 ===============
 
-Huy Thanh Nguyen
-
 Jin Han
 
 Scott Guyton

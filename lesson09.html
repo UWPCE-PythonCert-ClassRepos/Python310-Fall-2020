@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Notes for lesson 09 &mdash; IntroToPython: Fall 2020 1.0 documentation</title>
+  <title>Dec 8, 2020: Around around and around we go … &mdash; IntroToPython: Fall 2020 1.0 documentation</title>
   
 
   
@@ -35,7 +35,9 @@
 
     
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Lightning Talks: Fall 2020 Class" href="lightning_talks.html" />
+    <link rel="prev" title="Dec 1, 2020: A Classy Topic" href="lesson08.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -84,9 +86,35 @@
               
             
             
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="lesson01.html">10/13/2020: Introduction to Py310: Programming in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lesson02.html">10/20/2020: And now on to actual coding!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson03.html">10/27/2020: Real code!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson04.html">11/02/2020: A actual Program!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson05.html">11/19/2020: testing, testing, 1, 2, 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson06.html">11/17/2020: Odd sentences …</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson07.html">11/24/2020: import this</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson08.html">Dec 1, 2020: A Classy Topic</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Dec 8, 2020: Around around and around we go …</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#lightning-talks">Lightning Talks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#issues-that-came-up-during-the-week">Issues that came up during the week.</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#classmethods">classmethods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#notimplemented">NotImplemented</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#total-ordering">Total Ordering?!?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sum"><code class="docutils literal notranslate"><span class="pre">sum()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#private-attributes-and-dunders">“private” attributes and dunders</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#magic-methods-and-circle-class">Magic Methods and Circle class</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Lightning Talks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#new-topics">New Topics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#sorting">sorting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#oo-design">OO Design</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#object-oriented-mailroom">Object Oriented Mailroom</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="lightning_talks.html">Lightning Talks: Fall 2020 Class</a></li>
@@ -136,7 +164,7 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Notes for lesson 09</li>
+      <li>Dec 8, 2020: Around around and around we go …</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -155,9 +183,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="notes-for-lesson-09">
-<span id="notes-lesson09"></span><h1>Notes for lesson 09<a class="headerlink" href="#notes-for-lesson-09" title="Permalink to this headline">¶</a></h1>
-<p>12/4/2018</p>
+  <div class="section" id="dec-8-2020-around-around-and-around-we-go">
+<span id="notes-lesson09"></span><h1>Dec 8, 2020: Around around and around we go …<a class="headerlink" href="#dec-8-2020-around-around-and-around-we-go" title="Permalink to this headline">¶</a></h1>
 <p>A collection of notes to go over in class, to keep things organized.</p>
 <div class="section" id="lightning-talks">
 <h2>Lightning Talks<a class="headerlink" href="#lightning-talks" title="Permalink to this headline">¶</a></h2>
@@ -168,10 +195,50 @@
 </div>
 <div class="section" id="issues-that-came-up-during-the-week">
 <h2>Issues that came up during the week.<a class="headerlink" href="#issues-that-came-up-during-the-week" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="classmethods">
+<h3>classmethods<a class="headerlink" href="#classmethods" title="Permalink to this headline">¶</a></h3>
+<p>You really want to use the  <code class="docutils literal notranslate"><span class="pre">cls</span></code> parameter in a classmethod:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@classmethod</span>
+<span class="k">def</span> <span class="nf">from_diameter</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">diameter</span><span class="p">):</span>
+    <span class="n">radius</span> <span class="o">=</span> <span class="n">diameter</span> <span class="o">/</span> <span class="mi">2</span>
+    <span class="k">return</span> <span class="n">Circle</span><span class="p">(</span><span class="n">radius</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>should be:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@classmethod</span>
+<span class="k">def</span> <span class="nf">from_diameter</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">diameter</span><span class="p">):</span>
+    <span class="n">radius</span> <span class="o">=</span> <span class="n">diameter</span> <span class="o">/</span> <span class="mi">2</span>
+    <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">radius</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Why? Subclassing!</p>
+<p>Let’s play with that a bit ….</p>
+</div>
+<div class="section" id="notimplemented">
+<h3>NotImplemented<a class="headerlink" href="#notimplemented" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">NotImplemented</span></code> is a special value that can be used as a flag to indicate that a comparison cannot be made.</p>
+<p><a class="reference external" href="https://docs.python.org/3/library/constants.html?highlight=notimplemented#NotImplemented">https://docs.python.org/3/library/constants.html?highlight=notimplemented#NotImplemented</a></p>
+</div>
+<div class="section" id="total-ordering">
+<h3>Total Ordering?!?<a class="headerlink" href="#total-ordering" title="Permalink to this headline">¶</a></h3>
+<p>What does that mean?</p>
+<p>“Total Order” is a mathematical concept that’s a bit beyond me :-)</p>
+<p>But the layperson’s version is simply that two things are either less than, equal, or greater than each other in a consistent way.</p>
+<p>And what <em>that</em> means is that if you define equality, and one of less-than or greater-than, the others can all be derived from those two.</p>
+<p>So that is what the <code class="docutils literal notranslate"><span class="pre">functools.total_ordering</span></code> decorator does: it automatically creates the full set of comparison operators in terms if the two provided.</p>
+<p>Let’s take a quick look at my solution to see how that works.</p>
+</div>
 <div class="section" id="sum">
 <h3><code class="docutils literal notranslate"><span class="pre">sum()</span></code><a class="headerlink" href="#sum" title="Permalink to this headline">¶</a></h3>
-<p>You can use <code class="docutils literal notranslate"><span class="pre">sum()</span></code> for things other than numbers. Anything that you can add, you can use <code class="docutils literal notranslate"><span class="pre">sum()</span></code> for, but you need to give it a “start” value:</p>
-<p>From trigrams:</p>
+<p>You can use <code class="docutils literal notranslate"><span class="pre">sum()</span></code> for things other than numbers. Anything that you can add, you can use <code class="docutils literal notranslate"><span class="pre">sum()</span></code> for, but you need to give it a “start” value. You can use sum() on circles if you want:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">code</span><span class="o">-</span><span class="n">block</span><span class="p">::</span> <span class="n">ipython</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>In [16]: sum([Circle(2), Circle(3), Circle(4)], start=Circle(0))
+Out[16]: Circle(9.0)</p>
+</div></blockquote>
+<p>Or from trigrams:</p>
 <div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [14]: </span><span class="n">text</span>
 <span class="gh">Out[14]:</span>
 <span class="go">[&#39;him mention her under any other name. In his eyes she eclipses&#39;,</span>
@@ -190,7 +257,7 @@
 <span class="go"> ...</span>
 </pre></div>
 </div>
-<p>Except not strings:</p>
+<p>Except not strings (note the above is lists of strings, not strings themselves):</p>
 <div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [17]: </span><span class="nb">sum</span><span class="p">([</span><span class="s2">&quot;this&quot;</span><span class="p">,</span> <span class="s2">&quot;that&quot;</span><span class="p">,</span> <span class="s2">&quot;something&quot;</span><span class="p">],</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
 <span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
@@ -207,44 +274,6 @@
 <p><code class="docutils literal notranslate"><span class="pre">_something</span></code> vs <code class="docutils literal notranslate"><span class="pre">__something</span></code> vs <code class="docutils literal notranslate"><span class="pre">__something__</span></code></p>
 <p>Let’s talk about that…</p>
 </div>
-<div class="section" id="adding-parameters-to-a-subclass-init">
-<h3>Adding parameters to a subclass <code class="docutils literal notranslate"><span class="pre">__init__</span></code><a class="headerlink" href="#adding-parameters-to-a-subclass-init" title="Permalink to this headline">¶</a></h3>
-<p>In general, when you override a method in a subclass, you want the method signature to be the same. That is – all the parameters should be the same.</p>
-<p>However, sometimes, particularly with <code class="docutils literal notranslate"><span class="pre">__init__</span></code>, you may need a couple extra parameters. To keep things clean and extensible, you want to put the extra parameters at the beginning, before the super class’ parameters:</p>
-<p>And this lets you use <code class="docutils literal notranslate"><span class="pre">*args</span></code> and <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code> to pass along the usual ones.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Base</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">par1</span><span class="p">,</span> <span class="n">par2</span><span class="p">,</span> <span class="n">par3</span><span class="o">=</span><span class="n">something</span><span class="p">,</span> <span class="n">par4</span><span class="o">=</span><span class="n">something</span><span class="p">):</span>
-        <span class="o">...</span>
-
-<span class="k">class</span> <span class="nc">Subclass</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">newpar1</span><span class="p">,</span> <span class="n">newpar2</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">newpar1</span> <span class="o">=</span> <span class="n">newpar1</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">newpar2</span> <span class="o">=</span> <span class="n">newpar2</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwarg</span><span class="p">)</span>
-</pre></div>
-</div>
-<p><strong>Example:</strong> html_render Anchor tag:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">A</span><span class="p">(</span><span class="n">OneLineTag</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    anchor element</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">tag</span> <span class="o">=</span> <span class="s2">&quot;a&quot;</span>
-
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">link</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;href&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">link</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>This becomes particularly important with <code class="docutils literal notranslate"><span class="pre">super()</span></code> and subclassing…</p>
-</div>
-<div class="section" id="testing-challenges">
-<h3>Testing Challenges<a class="headerlink" href="#testing-challenges" title="Permalink to this headline">¶</a></h3>
-<img alt="_images/test_joke.jpeg" src="_images/test_joke.jpeg" />
-</div>
-<div class="section" id="any-other-html-render-questions">
-<h3>Any other html_render questions?<a class="headerlink" href="#any-other-html-render-questions" title="Permalink to this headline">¶</a></h3>
-<p>Brian: still up for a code review / debug lesson?</p>
-</div>
 <div class="section" id="magic-methods-and-circle-class">
 <h3>Magic Methods and Circle class<a class="headerlink" href="#magic-methods-and-circle-class" title="Permalink to this headline">¶</a></h3>
 <p>Any questions?</p>
@@ -253,6 +282,10 @@
 </div>
 <div class="section" id="id1">
 <h2>Lightning Talks<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Christopher Duane Smith</p>
+<p>Maria Corazon M Dacutanan</p>
+<p>Akalpit Gadre</p>
+<p>Roohie Menon</p>
 </div>
 <div class="section" id="new-topics">
 <h2>New Topics<a class="headerlink" href="#new-topics" title="Permalink to this headline">¶</a></h2>
@@ -262,19 +295,42 @@
 <p>see <code class="docutils literal notranslate"><span class="pre">examples/lesson09/sort_key.py</span></code></p>
 <p>let’s try it on Circle….</p>
 </div>
-<div class="section" id="classmethod">
-<h3>classmethod<a class="headerlink" href="#classmethod" title="Permalink to this headline">¶</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">classmethod</span></code> is really pretty simple to use, not much to talk about. But it can be a bit challenging to “get”.</p>
-<p>The key point is that classmethods work for subclasses – like for alternate constructors.</p>
-<p>Let’s look at that with my Circle solution:</p>
-<p><code class="docutils literal notranslate"><span class="pre">solutions/lesson08/circle.py</span></code></p>
-<p>(and answer any other questions about Circle, while we are at it)</p>
-</div>
-<div class="section" id="multiple-inheritance-and-super">
-<h3>multiple inheritance and super()<a class="headerlink" href="#multiple-inheritance-and-super" title="Permalink to this headline">¶</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">super()</span></code> is a mixed bag – it’s actually a pretty complex topic, but can be pretty easy to use – at least in the simple cases.</p>
-<p>To get the hang of multiple inheritance, mix-ins, and <code class="docutils literal notranslate"><span class="pre">super()</span></code>, we’ll play around with object canvas:</p>
-<p>See: <code class="docutils literal notranslate"><span class="pre">examples/lesson09/object_canvas.py</span></code></p>
+<div class="section" id="oo-design">
+<h3>OO Design<a class="headerlink" href="#oo-design" title="Permalink to this headline">¶</a></h3>
+<p>You can find a lot of stuff written about OO design. I am a bit wary of much of it – I think we should all follow good design practices, and use OO features when they are useful, not because they follow from a OO design process. That being said, here are a few thoughts:</p>
+<p><strong>Nouns vs Verbs:</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Nouns are classes (Donor, Circle, ….)</p></li>
+<li><p>Verbs are are methods.</p></li>
+</ul>
+</div></blockquote>
+<p>But you don’t need to make a class just because you have a noun: nouns can be simple data types as well: a string, and integer, a list ….</p>
+<p>And you <strong>Really don’t</strong> want to make a class, just so you can then add a method to it to make a verb! Simple things can be simple, if a function does one thing, with simple inputs, and simiple outputs, it can just be a function.</p>
+<p>This is why <code class="docutils literal notranslate"><span class="pre">staticmethod</span></code> is not used much in Python – if it’s a static method, why put it in a class? Just make it a function!</p>
+<p>I really like Jack Dietrich’s point:</p>
+<blockquote>
+<div><p>“If a class only has two methods, and one of them is __init__, you don’t have a class”</p>
+</div></blockquote>
+<p><strong>Encapsulation:</strong></p>
+<p>Encapsulation is keeping things “hidden” – many folks (and languages) see this as an important feature. But Python doesn’t strictly support it at all. However, it IS a good idea to keep the data, and the methods that act on that data together. Not because we need to hide tings, but because then there is a single clear API to work with, and the under the hood details can be changed without breaking other code. Classes are helpful for this.</p>
+<p><strong>Keeping it DRY</strong></p>
+<blockquote>
+<div><p>Don’t Repeat Yourself!</p>
+</div></blockquote>
+<p>This is THE BIG ONE in program  design – it drives a lot of design decisions. When you realy want classes is when:</p>
+<ol class="arabic simple">
+<li><p>you are going to make a lot of instances of the class</p></li>
+</ol>
+<p>and/or</p>
+<ol class="arabic simple" start="2">
+<li><p>you are going to subclass</p></li>
+</ol>
+<p>We really haven’t done much subclassing yet – but you’ll see how that can really help keep your code DRY.</p>
+<p><strong>Separation of Concerns:</strong></p>
+<p>This is keeping thinks well grouped so that code that does the same thing stays together. It’s not strictly required to use classes for that – but it does help.</p>
+<p>Thoughts, ideas?</p>
+<p>Let’s keep these things in mind as we think about how (and whether) to restructure Mailroom with classes.</p>
 </div>
 <div class="section" id="object-oriented-mailroom">
 <h3>Object Oriented Mailroom<a class="headerlink" href="#object-oriented-mailroom" title="Permalink to this headline">¶</a></h3>
@@ -290,6 +346,15 @@
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="lightning_talks.html" class="btn btn-neutral float-right" title="Lightning Talks: Fall 2020 Class" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="lesson08.html" class="btn btn-neutral float-left" title="Dec 1, 2020: A Classy Topic" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

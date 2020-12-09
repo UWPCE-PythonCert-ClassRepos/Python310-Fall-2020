@@ -26,7 +26,7 @@ Notes for each Lesson
     lesson06
     lesson07
     lesson08
-..    lesson09
+    lesson09
 ..    lesson10
 
 .. toctree::
