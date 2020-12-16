@@ -27,7 +27,7 @@ Notes for each Lesson
     lesson07
     lesson08
     lesson09
-..    lesson10
+    lesson10
 
 .. toctree::
     :maxdepth: 1

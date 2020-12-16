@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Notes for lesson 10 &mdash; IntroToPython: Fall 2020 1.0 documentation</title>
+  <title>Dec 15, 2020: the final hour! &mdash; IntroToPython: Fall 2020 1.0 documentation</title>
   
 
   
@@ -35,7 +35,9 @@
 
     
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Lightning Talks: Fall 2020 Class" href="lightning_talks.html" />
+    <link rel="prev" title="Dec 8, 2020: Around around and around we go …" href="lesson09.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -84,7 +86,7 @@
               
             
             
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="lesson01.html">10/13/2020: Introduction to Py310: Programming in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lesson02.html">10/20/2020: And now on to actual coding!</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lesson03.html">10/27/2020: Real code!</a></li>
@@ -93,6 +95,23 @@
 <li class="toctree-l1"><a class="reference internal" href="lesson06.html">11/17/2020: Odd sentences …</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lesson07.html">11/24/2020: import this</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lesson08.html">Dec 1, 2020: A Classy Topic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson09.html">Dec 8, 2020: Around around and around we go …</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Dec 15, 2020: the final hour!</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#lightning-talks">Lightning Talks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#issues-that-came-up-during-the-week">Issues that came up during the week.</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#when-to-make-a-method-vs-a-property">When to make a method vs. a property?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pointless-properties">Pointless properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#anything-else-from-oo-mailroom">Anything else from OO mailroom?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Lightning Talks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#html-render">html_render</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#the-next-class">The Next Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#end-of-quarter">End of Quarter:</a></li>
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="lightning_talks.html">Lightning Talks: Fall 2020 Class</a></li>
@@ -142,7 +161,7 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Notes for lesson 10</li>
+      <li>Dec 15, 2020: the final hour!</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -161,32 +180,17 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="notes-for-lesson-10">
-<span id="notes-lesson10"></span><h1>Notes for lesson 10<a class="headerlink" href="#notes-for-lesson-10" title="Permalink to this headline">¶</a></h1>
-<p>12/11/2018</p>
-<p>A collection of notes to go over in class, to keep things organized.</p>
+  <div class="section" id="dec-15-2020-the-final-hour">
+<span id="notes-lesson10"></span><h1>Dec 15, 2020: the final hour!<a class="headerlink" href="#dec-15-2020-the-final-hour" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="lightning-talks">
 <h2>Lightning Talks<a class="headerlink" href="#lightning-talks" title="Permalink to this headline">¶</a></h2>
 <p>Jin Han</p>
 <p>Scott Guyton</p>
 <p>Andrew Hanson</p>
+<p>And if I’ve missed anyone – now’s your last chance!</p>
 </div>
 <div class="section" id="issues-that-came-up-during-the-week">
 <h2>Issues that came up during the week.<a class="headerlink" href="#issues-that-came-up-during-the-week" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="classmethod">
-<h3><code class="docutils literal notranslate"><span class="pre">classmethod</span></code><a class="headerlink" href="#classmethod" title="Permalink to this headline">¶</a></h3>
-<p>I didn’t get a chance to go over this last week, so I will now.</p>
-<p>One Circle solution had this:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@classmethod</span>
-<span class="k">def</span> <span class="nf">from_diameter</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
-    <span class="bp">cls</span><span class="o">.</span><span class="n">diameter</span> <span class="o">=</span> <span class="n">val</span>
-    <span class="bp">cls</span><span class="o">.</span><span class="n">radius</span> <span class="o">=</span> <span class="n">val</span> <span class="o">/</span> <span class="mi">2</span>
-    <span class="k">return</span> <span class="bp">cls</span>
-</pre></div>
-</div>
-<p>What is wrong with this code? What is actually happening here??</p>
-<p>Let’s check it out.</p>
-</div>
 <div class="section" id="when-to-make-a-method-vs-a-property">
 <h3>When to make a method vs. a property?<a class="headerlink" href="#when-to-make-a-method-vs-a-property" title="Permalink to this headline">¶</a></h3>
 <p>It is a good idea to make a property to access information in your class that requires “inside information”, For example, in a Donor class:</p>
@@ -221,35 +225,20 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="magic-methods">
-<h3>Magic Methods<a class="headerlink" href="#magic-methods" title="Permalink to this headline">¶</a></h3>
-<p>The “math” magic methods: <code class="docutils literal notranslate"><span class="pre">__add__</span></code>, etc, should return the object – not strings!</p>
-</div>
 <div class="section" id="anything-else-from-oo-mailroom">
 <h3>Anything else from OO mailroom?<a class="headerlink" href="#anything-else-from-oo-mailroom" title="Permalink to this headline">¶</a></h3>
-<p>Does anyone volunteer for a code review?</p>
-<p>Or should we review mine?</p>
+<p>I’ll take any burning questions, but want time to workon the the HTML render assignment</p>
 </div>
 </div>
 <div class="section" id="id1">
 <h2>Lightning Talks<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="do-you-always-need-an-init">
-<h3>Do you always need an <code class="docutils literal notranslate"><span class="pre">__init__</span></code>?<a class="headerlink" href="#do-you-always-need-an-init" title="Permalink to this headline">¶</a></h3>
-<p>No – you don’t :-)</p>
-<p>The ONLY thing “special” about <code class="docutils literal notranslate"><span class="pre">__init__</span></code> is that it is automatically called when an instance is created.  Other than that, it’s a regular method. So if you don’t define one, then the superclass’ <code class="docutils literal notranslate"><span class="pre">__init__</span></code> will be called. (and <code class="docutils literal notranslate"><span class="pre">object</span></code>, the default superclass, has a default one – so it’s always there somewhere).</p>
-<p>That’s what inheritance is all about – the subclass inherits ALL the superclasses’ methods – including <code class="docutils literal notranslate"><span class="pre">__init__</span></code>.</p>
-<p>So never write an <code class="docutils literal notranslate"><span class="pre">__init__</span></code> that does nothing but call the superclass <code class="docutils literal notranslate"><span class="pre">__init__</span></code></p>
-</div>
-<div class="section" id="subclasses-and-self">
-<h3>Subclasses and <code class="docutils literal notranslate"><span class="pre">self</span></code><a class="headerlink" href="#subclasses-and-self" title="Permalink to this headline">¶</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">self</span></code> is the first parameter in all methods. But why??</p>
-<p><code class="docutils literal notranslate"><span class="pre">self</span></code> is the “current” instance of the object. This means that you don’t know at code writing time what type it is – is it the current class? some subclass?</p>
-<p>Let’s experiment with that.</p>
-</div>
+<p>Jin Han</p>
+<p>Scott Guyton</p>
+<p>Andrew Hanson</p>
 <div class="section" id="html-render">
 <h3>html_render<a class="headerlink" href="#html-render" title="Permalink to this headline">¶</a></h3>
-<p>Let’s look at up to step 3….</p>
-<p>And move along…</p>
+<p>This one is pretty challenging – and gets into some nifty subclassing.</p>
+<p>So let’s get a good start on it by working through it together.</p>
 </div>
 </div>
 <div class="section" id="the-next-class">
@@ -258,7 +247,7 @@
 </div>
 <div class="section" id="end-of-quarter">
 <h2>End of Quarter:<a class="headerlink" href="#end-of-quarter" title="Permalink to this headline">¶</a></h2>
-<p>We will review PRs through Sunday.</p>
+<p>“Grades” are due a week from today - as we need time to review, do try to get everything submitted by the end of Sunday.</p>
 </div>
 </div>
 
@@ -267,6 +256,15 @@
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="lightning_talks.html" class="btn btn-neutral float-right" title="Lightning Talks: Fall 2020 Class" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="lesson09.html" class="btn btn-neutral float-left" title="Dec 8, 2020: Around around and around we go …" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
