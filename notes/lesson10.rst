@@ -3,13 +3,10 @@
 
 .. _notes_lesson10:
 
-####################
-Notes for lesson 10
-####################
+#############################
+Dec 15, 2020: the final hour!
+#############################
 
-12/11/2018
-
-A collection of notes to go over in class, to keep things organized.
 
 Lightning Talks
 ===============
@@ -20,28 +17,12 @@ Scott Guyton
 
 Andrew Hanson
 
+
+And if I've missed anyone -- now's your last chance!
+
+
 Issues that came up during the week.
 ====================================
-
-``classmethod``
----------------
-
-I didn't get a chance to go over this last week, so I will now.
-
-One Circle solution had this:
-
-.. code-block:: python
-
-    @classmethod
-    def from_diameter(cls, val):
-        cls.diameter = val
-        cls.radius = val / 2
-        return cls
-
-What is wrong with this code? What is actually happening here??
-
-Let's check it out.
-
 
 When to make a method vs. a property?
 -------------------------------------
@@ -68,6 +49,7 @@ There is no point to this -- ``a_donor.name`` is expected to be a string -- so i
 
 You *do* want to use properties to "hide" implementation details -- but the name attribute being a string is part of the API, not an implementation detail.
 
+
 Pointless properties
 --------------------
 
@@ -86,52 +68,50 @@ What's wrong this?
         def radius(self, radius):
             self._radius = radius
 
-Magic Methods
--------------
-
-The "math" magic methods: ``__add__``, etc, should return the object -- not strings!
 
 
 Anything else from OO mailroom?
 -------------------------------
 
-Does anyone volunteer for a code review?
-
-Or should we review mine?
+I'll take any burning questions, but want time to workon the the HTML render assignment
 
 
 Lightning Talks
 ===============
 
+Jin Han
+
+Scott Guyton
+
+Andrew Hanson
 
 
+.. Do you always need an ``__init__``?
+.. -----------------------------------
 
-Do you always need an ``__init__``?
------------------------------------
+.. No -- you don't :-)
 
-No -- you don't :-)
+.. The ONLY thing "special" about ``__init__`` is that it is automatically called when an instance is created.  Other than that, it's a regular method. So if you don't define one, then the superclass' ``__init__`` will be called. (and ``object``, the default superclass, has a default one -- so it's always there somewhere).
 
-The ONLY thing "special" about ``__init__`` is that it is automatically called when an instance is created.  Other than that, it's a regular method. So if you don't define one, then the superclass' ``__init__`` will be called. (and ``object``, the default superclass, has a default one -- so it's always there somewhere).
+.. That's what inheritance is all about -- the subclass inherits ALL the superclasses' methods -- including ``__init__``.
 
-That's what inheritance is all about -- the subclass inherits ALL the superclasses' methods -- including ``__init__``.
+.. So never write an ``__init__`` that does nothing but call the superclass ``__init__``
 
-So never write an ``__init__`` that does nothing but call the superclass ``__init__``
+.. Subclasses and ``self``
+.. -----------------------
 
-Subclasses and ``self``
------------------------
+.. ``self`` is the first parameter in all methods. But why??
 
-``self`` is the first parameter in all methods. But why??
+.. ``self`` is the "current" instance of the object. This means that you don't know at code writing time what type it is -- is it the current class? some subclass?
 
-``self`` is the "current" instance of the object. This means that you don't know at code writing time what type it is -- is it the current class? some subclass?
-
-Let's experiment with that.
+.. Let's experiment with that.
 
 html_render
 -----------
 
-Let's look at up to step 3....
+This one is pretty challenging -- and gets into some nifty subclassing.
 
-And move along...
+So let's get a good start on it by working through it together.
 
 
 
@@ -145,7 +125,7 @@ Next quarter, you'll finish up the core of the Python language, then go into dep
 End of Quarter:
 ===============
 
-We will review PRs through Sunday.
+"Grades" are due a week from today - as we need time to review, do try to get everything submitted by the end of Sunday.
 
 
 
