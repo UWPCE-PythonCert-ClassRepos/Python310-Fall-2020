@@ -5,6 +5,7 @@ This is an object oriented version
 
 import math
 from textwrap import dedent
+from operator import attrgetter
 
 
 # Utility so we have data to test with, etc.
@@ -70,6 +71,10 @@ class Donor():
     def average_donation(self):
         return self.total_donations / len(self.donations)
 
+    @property
+    def num_donations(self):
+        return len(self.donations)
+
     def add_donation(self, amount):
         """
         add a new donation
@@ -80,8 +85,8 @@ class Donor():
     @staticmethod
     def validate_donation(donation):
         """
-        validates a dontation input for float,
-        non-negative, etc.non-negative
+        validates a donation input for float,
+        non-negative, etc.
 
         :param donation: the input donation
         :type donation: string
@@ -124,16 +129,6 @@ class DonorDB():
             self.donor_data = {}
         else:
             self.donor_data = {d.norm_name: d for d in donors}
-
-    # def save_to_file(self, filename):
-    #     with open(filename, 'w') as outfile:
-    #         self.to_json(outfile)
-
-    # @classmethod
-    # def load_from_file(cls, filename):
-    #     with open(filename, 'r') as infile:
-    #         obj = js.from_json(infile)
-    #     return obj
 
     @property
     def donors(self):
@@ -228,26 +223,20 @@ class DonorDB():
 
         :returns: the donor report as a string.
         """
-        # First, reduce the raw data into a summary list view
-        report_rows = []
-        for donor in self.donor_data.values():
-            name = donor.name
-            gifts = donor.donations
-            total_gifts = donor.total_donations
-            num_gifts = len(gifts)
-            avg_gift = donor.average_donation
-            report_rows.append((name, total_gifts, num_gifts, avg_gift))
-
-        # sort the report data
-        report_rows.sort(key=self.sort_key)
         report = []
         report.append("{:25s} | {:11s} | {:9s} | {:12s}".format("Donor Name",
                                                                 "Total Given",
                                                                 "Num Gifts",
                                                                 "Average Gift"))
         report.append("-" * 66)
-        for row in report_rows:
-            report.append("{:25s}   ${:10.2f}   {:9d}   ${:11.2f}".format(*row))
+
+        for donor in sorted(self.donor_data.values(),
+                            key=attrgetter("total_donations")):
+            report.append(f"{donor.name:25s}   "
+                          f"${donor.total_donations:10.2f}   "
+                          f"{donor.num_donations:9d}   "
+                          f"${donor.average_donation:11.2f}")
+
         return "\n".join(report)
 
     def save_letters_to_disk(self):

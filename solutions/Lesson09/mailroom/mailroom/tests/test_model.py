@@ -201,6 +201,12 @@ def test_generate_donor_report():
 
     assert "Jeff Bezos                  $    877.33           1   $     877.33" in report
 
+    # check if it's in the right order
+    lines = report.split("\n")
+    assert "Paul Allen" in lines[2]
+    assert "William Gates III" in lines[5]
+
+
 
 def test_save_letters_to_disk():
     """
